@@ -167,6 +167,10 @@ alter table listafavorito
 ADD FOREIGN KEY(fk_id_usuario)
 REFERENCES usuario (id_usuario);
 
+alter table acomodacao
+ADD COLUMN diaria FLOAT
+AFTER nome_ac;
+
 
 
 
