@@ -20,6 +20,7 @@ classe_niv VARCHAR(20) NOT NULL,
 create table acomodacao(
 id_acom INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
 nome_ac VARCHAR(255) NOT NULL,
+diaria VARCHAR(255) NOT NULL,
  PRIMARY KEY (id_acom));
  
 create table tipoacom(
@@ -30,22 +31,23 @@ classe_acom VARCHAR(255) NOT NULL,
 create table destino(
 id_dest INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
 nome_de VARCHAR(255) NOT NULL,
+tipo_de VARCHAR(255) NOT NULL,
 cidade VARCHAR(255) NOT NULL,
 estado VARCHAR(255) NOT NULL,
 pais VARCHAR(255) NOT NULL,
-tipo_de VARCHAR(255) NOT NULL,
  PRIMARY KEY (id_dest));
  
  create table dataviagem(
 id_data INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
 datamin DATE NOT NULL,
 datamax DATE NOT NULL,
-tipo_de VARCHAR(255) NOT NULL,
  PRIMARY KEY (id_data));
  
 create table orcamento(
 id_orcam INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+qtde_pessoa INTEGER NOT NULL,
 valormax INTEGER NOT NULL,
+tipo_dest_orc VARCHAR(255),
  PRIMARY KEY (id_orcam));
  
 create table imagem(
@@ -167,9 +169,11 @@ alter table listafavorito
 ADD FOREIGN KEY(fk_id_usuario)
 REFERENCES usuario (id_usuario);
 
-alter table acomodacao
-ADD COLUMN diaria FLOAT
-AFTER nome_ac;
+alter table orcamento
+ADD COLUMN fk_id_nivel INTEGER;
+alter table orcamento
+ADD FOREIGN KEY(fk_id_nivel)
+REFERENCES nivel (id_nivel);
 
 
 
