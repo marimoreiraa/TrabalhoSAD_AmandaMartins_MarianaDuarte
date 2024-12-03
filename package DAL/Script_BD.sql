@@ -1,9 +1,9 @@
 -- Script de Criação do Banco
 
-create database IF NOT EXISTS mochileiroPobre
+create database IF NOT EXISTS mochileiropobre
 default character set utf8
 default collate utf8_general_ci;
-use mochileiroPobre;
+use mochileiropobre;
 
 create table usuario(
 id_usuario INTEGER NOT NULL AUTO_INCREMENT UNIQUE,

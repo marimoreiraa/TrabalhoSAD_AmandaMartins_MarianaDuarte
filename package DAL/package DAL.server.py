@@ -5,6 +5,6 @@ conn = pymysql.connect(
   host="localhost",
   user="root",
   password="Minas@0202",
-  database="mochileiroPobre",
+  database="mochileiropobre",
   charset="utf8mb4"
 )
