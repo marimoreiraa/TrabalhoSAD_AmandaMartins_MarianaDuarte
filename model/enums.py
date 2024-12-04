@@ -3,9 +3,6 @@ from enum import Enum
 class TipoDestino(Enum):
     QUENTE = "Quente"
     FRIO = "Frio"
-    CULTURAL = "Cultural"
-    NATUREZA = "Natureza"
-    AVENTURA = "Aventura"
 
 class NivelViagem(Enum):
     SIMPLES = "Simples"
