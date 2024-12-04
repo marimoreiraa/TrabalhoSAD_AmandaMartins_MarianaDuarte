@@ -1,18 +1,12 @@
-from sqlalchemy import Column, Integer, Float, ForeignKey, Enum
-from sqlalchemy.orm import relationship
-from database.database import Base
 from enums import TipoDestino, NivelViagem, MesViagem
 
-class PerfilViagem(Base):
-    __tablename__ = 'perfis_viagem'
-
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False)  # Relacionamento com o usuário
-    mes_viagem = Column(Enum(MesViagem), nullable=False)  # Mês de viagem
-    numero_pessoas = Column(Integer, nullable=False)  # Quantidade de viajantes
-    orcamento_por_pessoa = Column(Float, nullable=False)
-    tipo_destino = Column(Enum(TipoDestino), nullable=False)
-    nivel_viagem = Column(Enum(NivelViagem), nullable=False)
-
-    recomendacoes = relationship("Recomendacao", back_populates="perfil_viagem")
+class PerfilViagem:
+    def __init__(self, id, usuario_id, mes_viagem, numero_pessoas, orcamento_por_pessoa, tipo_destino, nivel_viagem):
+        self.id = id
+        self.usuario_id = usuario_id
+        self.mes_viagem = mes_viagem  # Enum: MesViagem
+        self.numero_pessoas = numero_pessoas
+        self.orcamento_por_pessoa = orcamento_por_pessoa
+        self.tipo_destino = tipo_destino  # Enum: TipoDestino
+        self.nivel_viagem = nivel_viagem  # Enum: NivelViagem
 

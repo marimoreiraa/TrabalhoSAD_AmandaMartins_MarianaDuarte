@@ -1,23 +1,42 @@
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+import pymysql
+from pymysql import cursors
+from dotenv import load_dotenv
+import os
 
-# Configurações do banco de dados (exemplo de MySQL)
-DATABASE_URL = "mysql+pymysql://usuario:senha@localhost/banco_de_dados"
+class Database:
 
-engine = create_engine(DATABASE_URL)
+    def __init__(self):
+        load_dotenv()
+        self.host = os.getenv('DB_HOST')
+        self.user = os.getenv('DB_USER')
+        self.password = os.getenv('DB_PASSWORD')
+        self.database = os.getenv('DB_NAME')
+        self.connection = None
 
-Base = declarative_base()
+    def connect(self):
+        try:
+            self.connection = pymysql.connect(
+                host=self.host,
+                user=self.user,
+                password=self.password,
+                database=self.database,
+                cursorclass=cursors.DictCursor
+            )
+        except pymysql.MySQLError as e:
+            print(f"Erro ao conectar ao banco de dados: {e}")
+            raise
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    def close(self):
+        if self.connection:
+            self.connection.close()
 
-def init_db():
-    # Cria as tabelas no banco de dados, caso não existam
-    Base.metadata.create_all(bind=engine)
-
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+    def execute_query(self, query, params=None):
+        try:
+            with self.connection.cursor() as cursor:
+                cursor.execute(query, params)
+                self.connection.commit()
+                return cursor.fetchall()
+        except pymysql.MySQLError as e:
+            print(f"Erro na execução da query: {e}")
+            self.connection.rollback()
+            return None
