@@ -1,23 +1,24 @@
-from sqlalchemy.orm import Session
-from model.perfilviagem import PerfilViagem
+from database import Database
 
 class PerfilViagemDAL:
-    def __init__(self, db: Session):
-        self.db = db
+    def __init__(self, db_config):
+        self.db = Database(**db_config)
 
-    def criar_perfil_viagem(self, usuario_id: int, mes_viagem: str, numero_pessoas: int, orcamento_por_pessoa: float, tipo_destino: str, nivel_viagem: str) -> PerfilViagem:
-        perfil_viagem = PerfilViagem(
-            usuario_id=usuario_id,
-            mes_viagem=mes_viagem,
-            numero_pessoas=numero_pessoas,
-            orcamento_por_pessoa=orcamento_por_pessoa,
-            tipo_destino=tipo_destino,
-            nivel_viagem=nivel_viagem
-        )
-        self.db.add(perfil_viagem)
-        self.db.commit()
-        self.db.refresh(perfil_viagem)
-        return perfil_viagem
+    def connect(self):
+        self.db.connect()
 
-    def buscar_perfil_viagem_por_usuario(self, usuario_id: int) -> PerfilViagem:
-        return self.db.query(PerfilViagem).filter(PerfilViagem.usuario_id == usuario_id).first()
+    def close(self):
+        self.db.close()
+
+    def criar_perfil(self, usuario_id, mes_viagem, numero_pessoas, orcamento_por_pessoa, tipo_destino, nivel_viagem):
+        query = """
+            INSERT INTO perfis_viagem (usuario_id, mes_viagem, numero_pessoas, orcamento_por_pessoa, tipo_destino, nivel_viagem)
+            VALUES (%s, %s, %s, %s, %s, %s)
+        """
+        params = (usuario_id, mes_viagem, numero_pessoas, orcamento_por_pessoa, tipo_destino, nivel_viagem)
+        self.db.execute_query(query, params)
+
+    def obter_perfil_por_usuario(self, usuario_id):
+        query = "SELECT * FROM perfis_viagem WHERE usuario_id = %s"
+        params = (usuario_id,)
+        return self.db.execute_query(query, params)

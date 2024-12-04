@@ -1,30 +1,43 @@
-from sqlalchemy.orm import Session
-from model.recomendacao import Recomendacao
-from datetime import datetime
+from database import Database
 
-class RecomendacoesDAL:
-    def __init__(self, db: Session):
-        self.db = db
+class RecomendacaoDAL:
+    def __init__(self, db_config):
+        self.db = Database(**db_config)
 
-    def criar_recomendacao(self, usuario_id: int, perfil_usuario_id: int, destinos: list) -> Recomendacao:
-        recomendacao = Recomendacao(
-            usuario_id=usuario_id,
-            perfil_usuario_id=perfil_usuario_id,
-            data_recomendacao=datetime.now()
-        )
-        self.db.add(recomendacao)
-        self.db.commit()
-        self.db.refresh(recomendacao)
+    def connect(self):
+        self.db.connect()
 
-        # Adiciona os destinos à recomendação (associando-os)
-        for destino in destinos:
-            recomendacao.destinos.append(destino)
+    def close(self):
+        self.db.close()
 
-        self.db.commit()
-        return recomendacao
+    def criar_recomendacao(self, usuario_id, perfil_usuario_id, destinos):
+        query = """
+            INSERT INTO recomendacoes (usuario_id, perfil_usuario_id, data_recomendacao)
+            VALUES (%s, %s, NOW())
+        """
+        params = (usuario_id, perfil_usuario_id)
+        self.db.execute_query(query, params)
+        
+        # Recupera o ID da recomendação gerada
+        query = "SELECT LAST_INSERT_ID()"
+        recomendacao_id = self.db.execute_query(query)[0]["LAST_INSERT_ID()"]
 
-    def buscar_recomendacoes_por_usuario(self, usuario_id: int) -> list:
-        return self.db.query(Recomendacao).filter(Recomendacao.usuario_id == usuario_id).all()
+        # Associa os destinos à recomendação
+        for destino_id in destinos:
+            query = """
+                INSERT INTO recomendacao_destino (recomendacao_id, destino_id)
+                VALUES (%s, %s)
+            """
+            params = (recomendacao_id, destino_id)
+            self.db.execute_query(query, params)
 
-    def buscar_recomendacao_por_id(self, recomendacao_id: int) -> Recomendacao:
-        return self.db.query(Recomendacao).filter(Recomendacao.id == recomendacao_id).first()
+    def obter_recomendacoes_por_usuario(self, usuario_id):
+        query = """
+            SELECT r.id, r.data_recomendacao, p.mes_viagem, p.numero_pessoas, p.orcamento_por_pessoa,
+                   p.tipo_destino, p.nivel_viagem
+            FROM recomendacoes r
+            JOIN perfis_viagem p ON r.perfil_usuario_id = p.id
+            WHERE r.usuario_id = %s
+        """
+        params = (usuario_id,)
+        return self.db.execute_query(query, params)
