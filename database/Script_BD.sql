@@ -10,8 +10,7 @@ id INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
 nome VARCHAR(255) NOT NULL,
 email VARCHAR(255) NOT NULL,
 senha VARCHAR(255) NOT NULL,
- PRIMARY KEY (id));
- 
+ PRIMARY KEY (id)); 
  
 create table tipoacom(
 id_tipo_acom INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
@@ -165,6 +164,21 @@ alter table orcamento
 ADD FOREIGN KEY(fk_id_nivel)
 REFERENCES nivel (id_nivel);
 
+alter table acomodacao
+drop COLUMN url;
 
+alter table destino
+drop COLUMN url_dest;
 
+create table img_acom(
+id_img_acom INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+url VARCHAR(255),
+PRIMARY KEY (id_img_acom));
+
+alter table img_acom
+ADD COLUMN fk_id_acom INTEGER;
+
+alter table img_acom
+ADD FOREIGN KEY(fk_id_acom)
+REFERENCES acomodacao(id_acom);
 
