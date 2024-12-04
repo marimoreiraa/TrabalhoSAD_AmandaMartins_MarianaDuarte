@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2/family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: url('../assets/background.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.welcome-box {
+    text-align: center;
+    margin: 20px 0;
+    padding: 100px;
+}
+
+/* Estilo do formulário */
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container .input-box {
+    margin: 20px 0;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-container input,
+.form-container select {
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.form-container button.btn {
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container button.btn:hover {
+    background: #0056b3;
+}
+
+.wrapper {
+	width: 420px;
+	background: transparent;
+	border: 2px solid rgba(255,255,255,.2);
+	backdrop-filter: blur(20px);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+	color: #000000;
+	border-radius: 10px;
+	padding: 30px 40px;
+}
+
+.wrapper .logo{
+    text-align: center;
+}
+
+.logo img {
+  margin-bottom: 20px; 
+}
+
+
+.wrapper h1{
+	font-size: 36px;
+	text-align: center;
+}
+
+.wrapper .input-box{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	margin: 30px 0;
+}
+
+.input-box input{
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	border: 2px solid rgba(82, 80, 80, 0.2);
+	border-radius: 40px;
+	font-size: 16px;
+	color: #000000;
+	padding: 20px 45px 20px 20px;
+
+}
+
+.input-box input::placeholder{
+	color: #000000;
+
+}
+
+.input-box i {
+	position: absolute;
+	right: 20px;
+	top:50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+}
+
+
+.wrapper .btn{
+	width: 100%;
+	height: 45px;
+	background: #fff;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 40px;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+	font-size: 16px;
+	color:#333;
+	font-weight: 600;
+}
+
+.wrapper-register {
+	width: 420px;
+	background: transparent;
+	border: 2px solid rgba(255,255,255,.2);
+	backdrop-filter: blur(20px);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+	color: #000000;
+	border-radius: 10px;
+	padding: 30px 40px;
+}
+
+.wrapper-register .logo{
+    text-align: center;
+}
+
+.logo img {
+  margin-bottom: 20px; 
+}
+
+
+.wrapper-register h1{
+	font-size: 24px;
+	text-align: center;
+}
+
+.wrapper-register .btn{
+	width: 100%;
+	height: 45px;
+	background: #fff;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 40px;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+	font-size: 16px;
+	color:#333;
+	font-weight: 600;
+}
+
+.wrapper-register .register-link {
+    text-align: center;
+    margin-top: 20px; /* Espaçamento adicional entre o botão de Login e o texto de cadastro */
+    font-size: 14px;
+    color: #000000;
+}
+
+.wrapper-register .register-link a {
+    color: #007bff; /* Cor do link */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.wrapper-register .register-link a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Cor ao passar o mouse no link */
+}
+
+.wrapper-register .register-box{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	margin: 30px 0;
+}
+
+.register-box input{
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	border: 2px solid rgba(82, 80, 80, 0.2);
+	border-radius: 40px;
+	font-size: 16px;
+	color: #000000;
+	padding: 20px 45px 20px 20px;
+
+}
+
+.register-box input::placeholder{
+	color: #000000;
+
+}
+
+.register-box i {
+	position: absolute;
+	right: 20px;
+	top:50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+}
+
+.my-navbar{
+	background-color: rgba(255, 255, 255, 0.8);
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.my-navbar img{
+	display:flex;
+	align-items: center;
+	max-width: 50px;
+	max-height: 50px;
+	margin-right: 10px;
+
+}
+.my-navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+  
+.my-navbar li {
+	float: left;
+}
+  
+.my-navbar li a {
+	display: block;
+	color: #333;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+  
+.my-navbar li a:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.recommendations-container {
+    padding: 30px;
+    text-align: center;
+}
+
+.recommendations-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+.recommendations-container h3 {
+    font-size: 14px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.recommendations-container p {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+.destinos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.destino-card {
+    width: 300px;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.destino-card:hover {
+    transform: scale(1.05);
+}
+
+.destino-image img {
+    width: 100%;
+    margin-top: 10px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.destino-info {
+    text-align: center;
+}
+
+.destino-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.destino-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Container principal para o histórico */
+.historic-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container de recomendações */
+.historic-recommendations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os cards */
+}
+
+.recomendation-card {
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    gap: 20px; /* Espaço entre a info e as recomendações */
+}
+
+.recomendation-info {
+    flex: 2; /* Ocupa mais espaço na horizontal */
+}
+
+.recomendation-info h3 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.recomendation-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Estilo das recomendações */
+.recomendations {
+    flex: 1; /* Ocupa menos espaço */
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recomendations p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.recomendations p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
