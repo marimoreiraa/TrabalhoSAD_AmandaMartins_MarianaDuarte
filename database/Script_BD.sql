@@ -6,22 +6,12 @@ default collate utf8_general_ci;
 use mochileiropobre;
 
 create table usuario(
-id_usuario INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
-nome_us VARCHAR(255) NOT NULL,
+id INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+nome VARCHAR(255) NOT NULL,
 email VARCHAR(255) NOT NULL,
 senha VARCHAR(255) NOT NULL,
- PRIMARY KEY (id_usuario));
+ PRIMARY KEY (id));
  
-create table nivel(
-id_nivel INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
-classe_niv VARCHAR(20) NOT NULL,
- PRIMARY KEY (id_nivel));
- 
-create table acomodacao(
-id_acom INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
-nome_ac VARCHAR(255) NOT NULL,
-diaria VARCHAR(255) NOT NULL,
- PRIMARY KEY (id_acom));
  
 create table tipoacom(
 id_tipo_acom INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
