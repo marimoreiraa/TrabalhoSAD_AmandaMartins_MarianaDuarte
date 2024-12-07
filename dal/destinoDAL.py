@@ -13,5 +13,5 @@ class DestinoDAL:
         self.db.close()
 
     def obter_destinos(self):
-        query = "SELECT * FROM destinos"
+        query = "SELECT * FROM destino"
         return self.db.execute_query(query)

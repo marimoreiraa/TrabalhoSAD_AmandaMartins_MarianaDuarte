@@ -20,8 +20,16 @@ CREATE TABLE IF NOT EXISTS guia_mochileiro_pobre.perfil_viagem (
 CREATE TABLE IF NOT EXISTS guia_mochileiro_pobre.destino (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
+    pais VARCHAR(100) NOT NULL,
+    estado VARCHAR(100) NOT NULL,
     descricao TEXT NOT NULL,
-    imagem_url VARCHAR(255)
+    imagem_id INT,
+    mes_viagem ENUM('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro') NOT NULL,
+    numero_pessoas ENUM('Sozinho', 'Casal', 'Amigos','Família') NOT NULL,
+    orcamento FLOAT NOT NULL,
+    tipo_destino ENUM('Quente', 'Frio') NOT NULL,
+    FOREIGN KEY (imagem_id) REFERENCES guia_mochileiro_pobre.imagem_destino(id)
+
 );
 
 CREATE TABLE IF NOT EXISTS guia_mochileiro_pobre.recomendacao (
@@ -39,4 +47,9 @@ CREATE TABLE IF NOT EXISTS guia_mochileiro_pobre.recomendacao_destino (
     PRIMARY KEY (recomendacao_id, destino_id),
     FOREIGN KEY (recomendacao_id) REFERENCES guia_mochileiro_pobre.recomendacao(id),
     FOREIGN KEY (destino_id) REFERENCES guia_mochileiro_pobre.destino(id)
+);
+
+CREATE TABLE IF NOT EXISTS guia_mochileiro_pobre.imagem_destino (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    url VARCHAR(255) NOT NULL,
 );
