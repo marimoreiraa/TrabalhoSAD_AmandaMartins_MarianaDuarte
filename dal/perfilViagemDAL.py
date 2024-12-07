@@ -1,0 +1,26 @@
+import sys
+sys.path.insert(1, '/home/mariana/Documentos/TrabalhoSAD_AmandaMartins_MarianaDuarte/database')
+import database
+
+class PerfilViagemDAL:
+    def __init__(self):
+        self.db = database.Database()
+
+    def connect(self):
+        self.db.connect()
+
+    def close(self):
+        self.db.close()
+
+    def criar_perfil(self, usuario_id, mes_viagem, numero_pessoas, orcamento_por_pessoa, tipo_destino):
+        query = """
+            INSERT INTO perfil_viagem (usuario_id, mes_viagem, numero_pessoas, orcamento_por_pessoa, tipo_destino)
+            VALUES (%s, %s, %s, %s, %s)
+        """
+        params = (usuario_id, mes_viagem, numero_pessoas, orcamento_por_pessoa, tipo_destino)
+        self.db.execute_query(query, params)
+
+    def obter_perfil_por_usuario(self, usuario_id):
+        query = "SELECT * FROM perfil_viagem WHERE usuario_id = %s"
+        params = (usuario_id,)
+        return self.db.execute_query(query, params)

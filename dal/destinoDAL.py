@@ -1,8 +1,10 @@
-from database import Database
+import sys
+sys.path.insert(1, '/home/mariana/Documentos/TrabalhoSAD_AmandaMartins_MarianaDuarte/database')
+import database
 
 class DestinoDAL:
-    def __init__(self, db_config):
-        self.db = Database(**db_config)
+    def __init__(self):
+        self.db = database.Database()
 
     def connect(self):
         self.db.connect()
