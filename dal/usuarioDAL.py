@@ -1,11 +1,10 @@
-import sys
-sys.path.insert(1, '/home/mariana/Documentos/TrabalhoSAD_AmandaMartins_MarianaDuarte/database')
-import database
+from database.database import Database
 import bcrypt
+from model import usuario
 
 class UsuarioDAL:
     def __init__(self):
-        self.db = database.Database()
+        self.db = Database()
 
     def connect(self):
         self.db.connect()
@@ -20,7 +19,11 @@ class UsuarioDAL:
     def verificar_senha(self, senha_fornecida, hash_armazenado):
         return bcrypt.checkpw(senha_fornecida.encode('utf-8'), hash_armazenado)
 
-    def cadastrar_usuario(self, nome, email, senha):
+    def cadastrar_usuario(self, usuario):
+        nome = usuario.getNome()
+        email = usuario.getEmail()
+        senha = usuario.getSenha()
+
         query = """
             INSERT INTO usuario (nome, email, senha)
             VALUES (%s, %s, %s)
@@ -28,14 +31,13 @@ class UsuarioDAL:
         # Cria o hash da senha
         hash_senha = self.gerar_hash_senha(senha)
         params = (nome, email, hash_senha.decode('utf-8'))  # Armazena como string no banco
-        print(query)
         self.db.execute_query(query, params)
 
     def verificar_email(self, email):
+        
         query = "SELECT * FROM usuario WHERE email = %s"
         params = (email,)
         result = self.db.execute_query(query, params)
-        print(result)
         return result
 
     def obter_hash_senha(self, email):

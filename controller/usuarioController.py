@@ -1,5 +1,6 @@
 from flask import Blueprint, Flask, flash, render_template, request, redirect, url_for, session
 from dal import usuarioDAL
+from model.usuario import Usuario
 
 usuario_bp = Blueprint('usuario', __name__)
 usuario_dal = usuarioDAL.UsuarioDAL()
@@ -16,7 +17,6 @@ def login():
         else:
             senha_cadastrada = usuario_dal.validar_login(email, senha)
             if senha_cadastrada is not None:
-                print(email_existe)
                 session['nome_usuario'] = email_existe[0]['nome']
                 session['id_usuario'] = email_existe[0]['id']
                 return redirect(url_for('recomendacao.inicio'))
@@ -35,7 +35,8 @@ def cadastro():
         if len(email_existe) != 0:
             return render_template('cadastro.html', erro='Usuario ja cadastrado com o email informado')
         else:
-            usuario_dal.cadastrar_usuario(nome, email, senha)
+            usuario = Usuario(None,nome,email,senha)
+            usuario_dal.cadastrar_usuario(usuario)
             return render_template('login.html')
         
     else:
