@@ -14,4 +14,6 @@ register_blueprints(app)
 if __name__ == "__main__":
     db = Database()
     db.setup_database()
+    #Apenas uma vez
+    #db.adicionar_destinos()
     app.run(debug=True)

@@ -1,11 +1,11 @@
 class PerfilViagem:
-    def __init__(self, id, usuario_id, mes_viagem, numero_pessoas, orcamento_por_pessoa, tipo_destino):
+    def __init__(self, id, usuario_id, mes,diarias, orcamento_por_pessoa, clima):
         self.id = id
         self.usuario_id = usuario_id
-        self.mes_viagem = mes_viagem  # Enum: MesViagem
-        self.numero_pessoas = numero_pessoas
+        self.mes = mes
+        self.diarias = diarias
         self.orcamento_por_pessoa = orcamento_por_pessoa
-        self.tipo_destino = tipo_destino  # Enum: TipoDestino
+        self.clima = clima
     
     def getId(self):
         return self.id
@@ -13,15 +13,15 @@ class PerfilViagem:
     def getUsuarioId(self):
         return self.usuario_id
     
-    def getMesViagem(self):
-        return self.mes_viagem
+    def getMes(self):
+        return self.mes
     
-    def getNumeroPessoas(self):
-        return self.numero_pessoas
+    def getDiarias(self):
+        return self.diarias
     
     def getOrcamento(self):
         return self.orcamento_por_pessoa
     
-    def getTipoDestino(self):
-        return self.tipo_destino
+    def getClima(self):
+        return self.clima
 

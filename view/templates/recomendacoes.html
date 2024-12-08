@@ -24,10 +24,12 @@
                 <div class="destino-card">
                     <div class="destino-info">
                         <h3>{{ destino.nome }}</h3>
+                        <p>Gasto médio: {{destino.orcamento}}</p>
+                        <p>Clima predominante: {{destino.clima}}</p>
                         <p>{{ destino.descricao }}</p>
                     </div>
                     <div class="destino-image">
-                        <img src="{{destino.url}}" alt="Imagem de {{ destino.nome }}" />
+                        <img src="{{destino.imagem_url}}" alt="Imagem de {{ destino.nome }}" />
                     </div>
                 </div>
             {% endfor %}

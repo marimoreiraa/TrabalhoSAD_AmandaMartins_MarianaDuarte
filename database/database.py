@@ -61,3 +61,23 @@ class Database:
             print(f"Erro ao configurar o banco de dados: {e}")
         finally:
             self.close()
+
+    def adicionar_destinos(self):
+        dir_atual = os.path.dirname(os.path.abspath(__file__))
+        caminho_script = os.path.join(dir_atual, 'destinos.sql')
+
+        try:
+            with open(caminho_script, 'r') as sql_file:
+                sql = sql_file.read()
+
+            sql_comandos = sql.split(';')
+
+            for comando in sql_comandos:
+                comando = comando.strip()
+                if comando:  
+                    self.execute_query(comando)
+            print("Banco de dados configurado com sucesso!")
+        except Exception as e:
+            print(f"Erro ao configurar o banco de dados: {e}")
+        finally:
+            self.close()

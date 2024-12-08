@@ -22,10 +22,22 @@
                     <div class="recomendation-info">
                         <h3>Recomendação {{ loop.index }}</h3>
                         <h3>Gerada no dia: {{ item.recomendacao.data_recomendacao.strftime('%d/%m/%Y') }}</h3>
-                        <p>Mês da Viagem: {{ item.recomendacao.mes_viagem }}</p>
-                        <p>Viagem em: {{ item.recomendacao.numero_pessoas }}</p>
-                        <p>Tipo: {{ item.recomendacao.tipo_destino }}</p>
-                        <p>Orçamento: R${{ item.recomendacao.orcamento | round(2) }}</p>
+                        <p>Tipo da Recomendação: {{ item.recomendacao.tipo_recomendacao }}</p>
+
+                        <!-- Condicional para tipo de recomendação -->
+                        {% if item.recomendacao.tipo_recomendacao == 'Orcamento' %}
+                            <p>Orçamento: R${{ item.recomendacao.orcamento | round(2) }}</p>
+                            <p>Mês da Viagem: {{ item.recomendacao.mes_viagem }}</p>
+
+                        {% elif item.recomendacao.tipo_recomendacao == 'Clima' %}
+                            <p>Clima: {{ item.recomendacao.clima }}</p>
+                            <p>Mês da Viagem: {{ item.recomendacao.mes_viagem }}</p>
+
+                        {% elif item.recomendacao.tipo_recomendacao == 'Diarias' %}
+                            <p>Diárias: {{ item.recomendacao.diarias }}</p>
+                            <p>Mês da Viagem: {{ item.recomendacao.mes_viagem }}</p>
+                        {% endif %}
+
                     </div>
                     <div class="recomendations">
                         {% for destino in item.destinos %}

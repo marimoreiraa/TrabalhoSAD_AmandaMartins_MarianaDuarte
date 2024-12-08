@@ -9,6 +9,11 @@
 </head>
 <body>
     <div class="wrapper"> 
+        {% if mensagem %}
+        <script>
+            alert("{{ mensagem }}");
+        </script>
+        {% endif %}
         
         <form action="{{ url_for('usuario.login') }}" method="POST" id="login">
             <div class="logo">
