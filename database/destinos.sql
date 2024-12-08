@@ -7,7 +7,14 @@ VALUES
 ('https://media.staticontent.com/media/pictures/04641818-297a-4f28-b635-b15e2fb31087'),
 ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF7uCWUvCGOR-FWs8HO0ikyL4kejbMReCXfg&s'),
 ('https://www.viagensecaminhos.com/wp-content/uploads/2023/12/praia-de-atalaia-aracaju.jpg'),
-('https://imgmd.net/images/v1/guia/1704987/porto-seguro.jpg');
+('https://imgmd.net/images/v1/guia/1704987/porto-seguro.jpg'),
+('https://media.staticontent.com/media/pictures/39a5692d-b61e-44eb-95ad-d02d5d06d4d6'),
+('https://aruba.bynder.com/m/29d4ae5a6d524f1e/fullscreen_letterbox-Aerial-view-of-the-ocean.jpg'),
+('https://imgmd.net/images/v1/guia/1700390/o-que-fazer-em-punta-cana.jpg'),
+('https://uploads.grupodicas.com/2023/11/bathsheba.jpg'),
+('https://media.staticontent.com/media/pictures/2380f5a2-aa34-4205-870a-491b95f3cb8b'),
+('https://escapemagazine.com.br/wp-content/uploads/2023/08/winter-night-esqui-em-bariloche.jpg'),
+('https://www.brasileirosemushuaia.com.br/wp-content/uploads/2019/12/laguna.jpg');
 
 -- Rio de Janeiro
 INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
