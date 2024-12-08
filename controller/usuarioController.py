@@ -12,8 +12,8 @@ def login():
         senha = request.form['senha']
 
         email_existe = usuario_dal.verificar_email(email)
-        if email_existe is None:
-            return render_template('login.html', erro='Usuario não cadastrado')
+        if len(email_existe) == 0:
+            return render_template('login.html', mensagem='Usuario não cadastrado')
         else:
             senha_cadastrada = usuario_dal.validar_login(email, senha)
             if senha_cadastrada is not None:
@@ -33,7 +33,7 @@ def cadastro():
         email_existe = usuario_dal.verificar_email(email)
         
         if len(email_existe) != 0:
-            return render_template('cadastro.html', erro='Usuario ja cadastrado com o email informado')
+            return render_template('cadastro.html', mensagem='Usuario ja cadastrado com o email informado')
         else:
             usuario = Usuario(None,nome,email,senha)
             usuario_dal.cadastrar_usuario(usuario)

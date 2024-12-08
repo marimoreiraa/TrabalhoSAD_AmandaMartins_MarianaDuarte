@@ -349,10 +349,10 @@ body {
 
 /* Container principal para o histórico */
 .historic-container {
-    max-width: 900px;
+    max-width: 1500px;
     margin: 80px auto;
     padding: 20px;
-    background: #fff;
+    background: rgb(182, 235, 249);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -413,4 +413,31 @@ body {
 .recomendations p:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.recommendation-options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: blue;
 }

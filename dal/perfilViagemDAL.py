@@ -13,16 +13,16 @@ class PerfilViagemDAL:
 
     def criar_perfil(self,perfilViagem):
         usuario_id = perfilViagem.getUsuarioId()
-        mes = perfilViagem.getMesViagem()
-        qtd_pessoas = perfilViagem.getNumeroPessoas()
+        mes = perfilViagem.getMes()
         orcamento = perfilViagem.getOrcamento()
-        tipo_destino = perfilViagem.getTipoDestino()
+        clima = perfilViagem.getClima()
+        diarias = perfilViagem.getDiarias()
 
         query = """
-            INSERT INTO perfil_viagem (usuario_id, mes_viagem, numero_pessoas, orcamento_por_pessoa, tipo_destino)
+            INSERT INTO perfil_viagem (usuario_id, mes_viagem,orcamento, clima, diarias)
             VALUES (%s, %s, %s, %s, %s)
         """
-        params = (usuario_id, mes, qtd_pessoas, orcamento, tipo_destino)
+        params = (usuario_id,mes, orcamento, clima, diarias)
         self.db.execute_query(query, params)
         
         query = "SELECT MAX(id) AS max_id FROM guia_mochileiro_pobre.perfil_viagem"

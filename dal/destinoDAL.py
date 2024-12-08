@@ -12,7 +12,7 @@ class DestinoDAL:
 
     def obter_destinos_por_recomendacao(self, recomendacao_id):
         query = """
-            SELECT d.id, d.nome, d.descricao, i.url
+            SELECT d.id, d.nome, d.descricao, d.orcamento,d.clima,i.imagem_url
             FROM destino d
             JOIN recomendacao_destino rd ON d.id = rd.destino_id
             JOIN imagem_destino i ON d.imagem_id = i.id

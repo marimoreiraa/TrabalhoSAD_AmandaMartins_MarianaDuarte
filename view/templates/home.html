@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard - GMPobre</title>
-    <link rel="icon" href="../static/assets/logo.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
@@ -27,52 +27,15 @@
         {% endif %}
     </div>
 
-
-
-    <div class="form-container">
-        <form action={{ url_for('recomendacao.inicio') }} method="POST">
-            <div class="input-box">
-                <label for="mes">Mês da Viagem</label>
-                <select name="mes" id="mes" required>
-                    <option value="" disabled selected>Escolha um mês</option>
-                    <option value="janeiro">Janeiro</option>
-                    <option value="fevereiro">Fevereiro</option>
-                    <option value="marco">Março</option>
-                    <option value="abril">Abril</option>
-                    <option value="maio">Maio</option>
-                    <option value="junho">Junho</option>
-                    <option value="julho">Julho</option>
-                    <option value="agosto">Agosto</option>
-                    <option value="setembro">Setembro</option>
-                    <option value="outubro">Outubro</option>
-                    <option value="novembro">Novembro</option>
-                    <option value="dezembro">Dezembro</option>
-                </select>
-            </div>
-
-            <div class="input-box">
-                <label for="qtd_pessoas">Quantas pessoas irão viajar?</label>
-                <select id="qtd_pessoas" name="qtd_pessoas" required>
-                    <option value="sozinho">Sozinho</option>
-                    <option value="casal">Casal</option>
-                    <option value="amigos">Amigos</option>
-                    <option value="familia">Família</option>
-                </select>
-            </div>
-            <div class="input-box">
-                <label for="orcamento">Orçamento (por pessoa)</label>
-                <input type="number" id="orcamento" name="orcamento" placeholder="R$" required>
-            </div>
-            <div class="input-box">
-                <label for="tipo_destino">Tipo de destino</label>
-                <select id="tipo_destino" name="tipo_destino" required>
-                    <option value="quente">Quente</option>
-                    <option value="frio">Frio</option>
-                </select>
-            </div>
-            <button type="submit" class="btn">Gerar Recomendações</button>
-        </form>
+    <div class="recommendation-options">
+        <h3>Escolha o tipo de recomendação:</h3>
+        <div class="button-group">
+            <a href="{{ url_for('recomendacao.recomendacao_por_orcamento') }}" class="btn">Por Orçamento</a>
+            <a href="{{ url_for('recomendacao.recomendacao_por_diarias') }}" class="btn">Por Diárias</a>
+            <a href="{{ url_for('recomendacao.recomendacao_por_clima') }}" class="btn">Por Clima</a>
+        </div>
     </div>
+    
     <script src="../static/js/script.js" defer></script>
 </body>
 </html>
