@@ -14,7 +14,12 @@ VALUES
 ('https://uploads.grupodicas.com/2023/11/bathsheba.jpg'),
 ('https://media.staticontent.com/media/pictures/2380f5a2-aa34-4205-870a-491b95f3cb8b'),
 ('https://escapemagazine.com.br/wp-content/uploads/2023/08/winter-night-esqui-em-bariloche.jpg'),
-('https://www.brasileirosemushuaia.com.br/wp-content/uploads/2019/12/laguna.jpg');
+('https://www.brasileirosemushuaia.com.br/wp-content/uploads/2019/12/laguna.jpg'),
+('https://imgmd.net/images/c_limit%2Cw_1600/v1/guia/1684169/valle-nevado-188-c.jpg'),
+('https://machupicchubrasil.com.br/blog/wp-content/uploads/2022/07/huaraz1.png'),
+('https://www.ie.com.br/wp-content/uploads/2023/01/Cultura-de-Londres.jpg'),
+('https://static.mundoeducacao.uol.com.br/mundoeducacao/conteudo/toquio-pontos-turisticos.jpg'),
+('https://yazigitravel.com.br/wp-content/uploads/2020/06/Viagem-para-Seul-Coreia-do-Sul-Mathew-Schwartz-1.jpg');
 
 -- Rio de Janeiro
 INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
@@ -213,47 +218,127 @@ VALUES
 -- San Andrés
 INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
 VALUES
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Janeiro', 'Família', 6000.00, 'Quente','San Andrés', 'Colômbia', 13),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Fevereiro', 'Casal', 6400.00, 'Quente','San Andrés', 'Colômbia', 13),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Março', 'Amigos', 6100.00, 'Quente','San Andrés', 'Colômbia', 13),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Abril', 'Sozinho', 6050.00, 'Quente','San Andrés', 'Colômbia', 13),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Maio', 'Família', 5000.00, 'Quente','San Andrés', 'Colômbia', 13),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Junho', 'Casal', 5900.00, 'Quente', 'San Andrés', 'Colômbia', 13),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Julho', 'Amigos', 5950.00, 'Quente', 'San Andrés', 'Colômbia', 13),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Agosto', 'Sozinho', 4500.00, 'Quente','San Andrés', 'Colômbia', 13),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Setembro', 'Família', 4700.00, 'Quente','San Andrés', 'Colômbia', 13),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Outubro', 'Casal', 5300.00, 'Quente', 'San Andrés', 'Colômbia', 13),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Novembro', 'Amigos', 5700.00, 'Quente', 'San Andrés', 'Colômbia', 13),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Dezembro', 'Sozinho', 5800.00, 'Quente', 'San Andrés', 'Colômbia', 13);
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Janeiro', 'Família', 6000.00, 'Quente','Colômbia', 'San Andrés', 13),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Fevereiro', 'Casal', 6400.00, 'Quente','Colômbia', 'San Andrés', 13),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Março', 'Amigos', 6100.00, 'Quente','Colômbia', 'San Andrés', 13),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Abril', 'Sozinho', 6050.00, 'Quente','Colômbia', 'San Andrés', 13),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Maio', 'Família', 5000.00, 'Quente','Colômbia', 'San Andrés', 13),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Junho', 'Casal', 5900.00, 'Quente', 'Colômbia', 'San Andrés', 13),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Julho', 'Amigos', 5950.00, 'Quente', 'Colômbia', 'San Andrés', 13),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Agosto', 'Sozinho', 4500.00, 'Quente','Colômbia', 'San Andrés', 13),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Setembro', 'Família', 4700.00, 'Quente','Colômbia', 'San Andrés', 13),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Outubro', 'Casal', 5300.00, 'Quente', 'Colômbia', 'San Andrés', 13),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Novembro', 'Amigos', 5700.00, 'Quente', 'Colômbia', 'San Andrés', 13),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Dezembro', 'Sozinho', 5800.00, 'Quente', 'Colômbia', 'San Andrés', 13);
 
 -- Bariloche
 INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
 VALUES
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Janeiro', 'Família', 5000.00, 'Frio','Rio Negro', 'Argentina', 14),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Fevereiro', 'Casal', 5400.00, 'Frio','Rio Negro', 'Argentina', 14),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Março', 'Amigos', 6100.00, 'Frio','Rio Negro', 'Argentina', 14),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Abril', 'Sozinho', 6050.00, 'Frio','Rio Negro', 'Argentina', 14),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Maio', 'Família', 7000.00, 'Frio','Rio Negro', 'Argentina', 14),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Junho', 'Casal', 7900.00, 'Frio','Rio Negro', 'Argentina', 14),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Julho', 'Amigos', 9950.00, 'Frio','Rio Negro', 'Argentina', 14),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Agosto', 'Casal', 9500.00, 'Frio','Rio Negro', 'Argentina', 14),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Setembro', 'Família', 7700.00, 'Frio','Rio Negro', 'Argentina', 14),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Outubro', 'Casal', 6300.00, 'Frio','Rio Negro', 'Argentina', 14),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Novembro', 'Amigos', 5700.00, 'Frio','Rio Negro', 'Argentina', 14),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Dezembro', 'Sozinho', 5900.00, 'Frio','Rio Negro', 'Argentina', 14);
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Janeiro', 'Família', 5000.00, 'Frio','Argentina', 'Rio Negro', 14),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Fevereiro', 'Casal', 5400.00, 'Frio','Argentina', 'Rio Negro', 14),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Março', 'Amigos', 6100.00, 'Frio','Argentina', 'Rio Negro', 14),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Abril', 'Sozinho', 6050.00, 'Frio','Argentina', 'Rio Negro', 14),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Maio', 'Família', 7000.00, 'Frio','Argentina', 'Rio Negro', 14),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Junho', 'Casal', 7900.00, 'Frio','Argentina', 'Rio Negro', 14),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Julho', 'Amigos', 9950.00, 'Frio','Argentina', 'Rio Negro', 14),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Agosto', 'Casal', 9500.00, 'Frio','Argentina', 'Rio Negro', 14),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Setembro', 'Família', 7700.00, 'Frio','Argentina', 'Rio Negro', 14),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Outubro', 'Casal', 6300.00, 'Frio','Argentina', 'Rio Negro', 14),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Novembro', 'Amigos', 5700.00, 'Frio','Argentina', 'Rio Negro', 14),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Dezembro', 'Sozinho', 5900.00, 'Frio','Argentina', 'Rio Negro', 14);
 
 -- Ushuaia
 INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
 VALUES
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Janeiro', 'Família', 7000.00, 'Frio','Tierra del Fuego', 'Argentina', 15),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Fevereiro', 'Casal', 7400.00, 'Frio','Tierra del Fuego', 'Argentina', 15),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Março', 'Amigos', 7100.00, 'Frio','Tierra del Fuego', 'Argentina', 15),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Abril', 'Sozinho', 7250.00, 'Frio','Tierra del Fuego', 'Argentina', 15),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Maio', 'Família', 7200.00, 'Frio','Tierra del Fuego', 'Argentina', 15),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Junho', 'Casal', 8900.00, 'Frio','Tierra del Fuego', 'Argentina', 15),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Julho', 'Amigos', 9950.00, 'Frio','Tierra del Fuego', 'Argentina', 15),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Agosto', 'Casal', 11000.00, 'Frio','Tierra del Fuego', 'Argentina', 15),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Setembro', 'Família', 10700.00, 'Frio','Tierra del Fuego', 'Argentina', 15),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Outubro', 'Casal', 8300.00, 'Frio','Tierra del Fuego', 'Argentina', 15),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Novembro', 'Amigos', 8700.00, 'Frio','Tierra del Fuego', 'Argentina', 15),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Dezembro', 'Sozinho', 7900.00, 'Frio','Tierra del Fuego', 'Argentina', 15);
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Janeiro', 'Família', 7000.00, 'Frio','Argentina', 'Tierra del Fuego', 15),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Fevereiro', 'Casal', 7400.00, 'Frio','Argentina', 'Tierra del Fuego', 15),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Março', 'Amigos', 7100.00, 'Frio','Argentina', 'Tierra del Fuego', 15),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Abril', 'Sozinho', 7250.00, 'Frio','Argentina', 'Tierra del Fuego', 15),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Maio', 'Família', 7200.00, 'Frio','Argentina', 'Tierra del Fuego', 15),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Junho', 'Casal', 8900.00, 'Frio','Argentina', 'Tierra del Fuego', 15),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Julho', 'Amigos', 9950.00, 'Frio','Argentina', 'Tierra del Fuego', 15),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Agosto', 'Casal', 11000.00, 'Frio','Argentina', 'Tierra del Fuego', 15),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Setembro', 'Família', 10700.00, 'Frio','Argentina', 'Tierra del Fuego', 15),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Outubro', 'Casal', 8300.00, 'Frio','Argentina', 'Tierra del Fuego', 15),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Novembro', 'Amigos', 8700.00, 'Frio','Argentina', 'Tierra del Fuego', 15),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Dezembro', 'Sozinho', 7900.00, 'Frio','Argentina', 'Tierra del Fuego', 15);
+
+-- Valle Nevado
+INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
+VALUES
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Janeiro', 'Família', 9000.00, 'Frio','Chile', ' Lo Barnechea', 16),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Fevereiro', 'Casal', 9400.00, 'Frio','Chile', ' Lo Barnechea', 16),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Março', 'Amigos', 9100.00, 'Frio','Chile', ' Lo Barnechea', 16),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Abril', 'Sozinho', 9250.00, 'Frio','Chile', ' Lo Barnechea', 16),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Maio', 'Família', 12200.00, 'Frio','Chile', ' Lo Barnechea', 16),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Junho', 'Casal', 15000.00, 'Frio','Chile', ' Lo Barnechea', 16),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Julho', 'Amigos', 14450.00, 'Frio','Chile', ' Lo Barnechea', 16),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Agosto', 'Casal', 13900.00, 'Frio','Chile', ' Lo Barnechea', 16),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Setembro', 'Família', 10700.00, 'Frio','Chile', ' Lo Barnechea', 16),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Outubro', 'Casal', 10300.00, 'Frio','Chile', ' Lo Barnechea', 16),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Novembro', 'Amigos', 11700.00, 'Frio','Chile', ' Lo Barnechea', 16),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Dezembro', 'Sozinho', 12900.00, 'Frio','Chile', ' Lo Barnechea', 16);
+
+-- Huaraz
+INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
+VALUES
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Janeiro', 'Amigos', 3000.00, 'Frio','Peru', ' Ancash', 17),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Fevereiro', 'Casal', 3400.00, 'Frio','Peru', ' Ancash', 17),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Março', 'Amigos', 4100.00, 'Frio','Peru', ' Ancash', 17),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Abril', 'Sozinho', 4250.00, 'Frio','Peru', ' Ancash', 17),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Maio', 'Casal', 4200.00, 'Frio','Peru', ' Ancash', 17),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Junho', 'Casal', 5000.00, 'Frio','Peru', ' Ancash', 17),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Julho', 'Amigos', 5550.00, 'Frio','Peru', ' Ancash', 17),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Agosto', 'Casal', 5250.00, 'Frio','Peru', ' Ancash', 17),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Setembro', 'Sozinho', 3700.00, 'Frio','Peru', ' Ancash', 17),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Outubro', 'Casal', 3300.00, 'Frio','Peru', ' Ancash', 17),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Novembro', 'Amigos', 2700.00, 'Frio','Peru', ' Ancash', 17),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Dezembro', 'Sozinho', 2900.00, 'Frio','Peru', ' Ancash', 17);
+
+--Londres
+INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
+VALUES
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Janeiro', 'Família', 3000.00, 'Frio','Inglaterra', ' Londres', 18),
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Fevereiro', 'Casal', 3400.00, 'Frio','Inglaterra', ' Londres', 18),
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Março', 'Amigos', 4100.00, 'Frio','Inglaterra', ' Londres', 18),
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Abril', 'Sozinho', 4250.00, 'Quente','Inglaterra', ' Londres', 18),
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Maio', 'Família', 4200.00, 'Quente','Inglaterra', ' Londres', 18),
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Junho', 'Casal', 5000.00, 'Quente','Inglaterra', ' Londres', 18),
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Julho', 'Amigos', 5550.00, 'Quente','Inglaterra', ' Londres', 18),
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Agosto', 'Sozinho', 5250.00, 'Quente','Inglaterra', ' Londres', 18),
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Setembro', 'Família', 3700.00, 'Quente','Inglaterra', ' Londres', 18),
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Outubro', 'Casal', 3300.00, 'Frio','Inglaterra', ' Londres', 18),
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Novembro', 'Amigos', 2700.00, 'Frio','Inglaterra', ' Londres', 18),
+    ('Londres', 'A capital britânica oferece uma mistura de história, cultura e modernidade.', 'Dezembro', 'Sozinho', 2900.00, 'Frio','Inglaterra', ' Londres', 18);
+
+--Tóquio
+INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
+VALUES
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Janeiro', 'Família', 6000.00, 'Frio','Japão', ' Honshu', 19),
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Fevereiro', 'Casal', 6400.00, 'Frio','Japão', ' Honshu', 19),
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Março', 'Amigos', 7100.00, 'Frio','Japão', ' Honshu', 19),
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Abril', 'Sozinho', 7250.00, 'Quente','Japão', ' Honshu', 19),
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Maio', 'Família', 7200.00, 'Quente','Japão', ' Honshu', 19),
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Junho', 'Casal', 8000.00, 'Quente','Japão', ' Honshu', 19),
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Julho', 'Amigos', 8550.00, 'Quente','Japão', ' Honshu', 19),
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Agosto', 'Sozinho', 8250.00, 'Quente','Japão', ' Honshu', 19),
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Setembro', 'Família', 7700.00, 'Quente','Japão', ' Honshu', 19),
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Outubro', 'Casal', 7300.00, 'Frio','Japão', ' Honshu', 19),
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Novembro', 'Amigos', 6700.00, 'Frio','Japão', ' Honshu', 19),
+    ('Tóquio', 'A capital japonesa é uma metrópole vibrante com cultura milenar.', 'Dezembro', 'Sozinho', 7900.00, 'Frio','Japão', ' Honshu', 19);
+
+--Seul
+INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
+VALUES
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Janeiro', 'Família', 7000.00, 'Frio','Coréia do Sul', 'Sudogwon', 20),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Fevereiro', 'Casal', 7400.00, 'Frio','Coréia do Sul', 'Sudogwon', 20),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Março', 'Amigos', 6100.00, 'Frio','Coréia do Sul', ' Sudogwon', 20),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Abril', 'Sozinho', 6250.00, 'Quente','Coréia do Sul', ' Sudogwon', 20),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Maio', 'Família', 6200.00, 'Quente','Coréia do Sul', ' Sudogwon', 20),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Junho', 'Casal', 5000.00, 'Quente','Coréia do Sul', ' Sudogwon', 20),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Julho', 'Amigos', 5550.00, 'Quente','Coréia do Sul', ' Sudogwon', 20),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Agosto', 'Sozinho', 7250.00, 'Quente','Coréia do Sul', ' Sudogwon', 20),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Setembro', 'Família', 6700.00, 'Quente','Coréia do Sul', ' Sudogwon', 20),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Outubro', 'Casal', 6300.00, 'Frio','Coréia do Sul', ' Sudogwon', 20),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Novembro', 'Amigos', 6500.00, 'Frio','Coréia do Sul', ' Sudogwon', 20),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Dezembro', 'Sozinho', 5800.00, 'Frio','Coréia do Sul', ' Sudogwon', 20);
