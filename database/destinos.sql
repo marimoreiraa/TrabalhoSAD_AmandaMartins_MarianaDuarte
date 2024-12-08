@@ -32,12 +32,12 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Janeiro', 3000.00, 'Quente', 'Brasil', 'RJ', 1,5),
     ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Fevereiro', 2800.00, 'Quente', 'Brasil', 'RJ', 1,5),
-    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Março', 2500.00, 'Quente', 'Brasil', 'RJ', 1,5),
-    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Abril', 2200.00, 'Úmido', 'Brasil', 'RJ', 1,5),
-    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Maio', 2100.00, 'Úmido', 'Brasil', 'RJ', 1,5),
-    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Junho', 2300.00, 'Úmido', 'Brasil', 'RJ', 1,5),
-    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Julho', 2500.00, 'Úmido', 'Brasil', 'RJ', 1,5),
-    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Agosto', 2400.00, 'Úmido', 'Brasil', 'RJ', 1,5),
+    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Marco', 2500.00, 'Quente', 'Brasil', 'RJ', 1,5),
+    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Abril', 2200.00, 'Umido', 'Brasil', 'RJ', 1,5),
+    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Maio', 2100.00, 'Umido', 'Brasil', 'RJ', 1,5),
+    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Junho', 2300.00, 'Umido', 'Brasil', 'RJ', 1,5),
+    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Julho', 2500.00, 'Umido', 'Brasil', 'RJ', 1,5),
+    ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Agosto', 2400.00, 'Umido', 'Brasil', 'RJ', 1,5),
     ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Setembro', 2300.00, 'Quente', 'Brasil', 'RJ', 1,5),
     ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Outubro', 2500.00, 'Quente', 'Brasil', 'RJ', 1,5),
     ('Rio de Janeiro', 'Cidade famosa pelas suas praias e o Pão de Açúcar.', 'Novembro', 2200.00, 'Quente', 'Brasil', 'RJ', 1,5),
@@ -48,7 +48,7 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Gramado', 'Cidade turística famosa pelo clima frio e arquitetura charmosa.', 'Janeiro', 3500.00, 'Frio', 'Brasil', 'RS', 2,4),
     ('Gramado', 'Cidade turística famosa pelo clima frio e arquitetura charmosa.', 'Fevereiro', 3300.00, 'Frio', 'Brasil', 'RS', 2,4),
-    ('Gramado', 'Cidade turística famosa pelo clima frio e arquitetura charmosa.', 'Março', 3000.00, 'Frio', 'Brasil', 'RS', 2,4),
+    ('Gramado', 'Cidade turística famosa pelo clima frio e arquitetura charmosa.', 'Marco', 3000.00, 'Frio', 'Brasil', 'RS', 2,4),
     ('Gramado', 'Cidade turística famosa pelo clima frio e arquitetura charmosa.', 'Abril', 2800.00, 'Frio', 'Brasil', 'RS', 2,4),
     ('Gramado', 'Cidade turística famosa pelo clima frio e arquitetura charmosa.', 'Maio', 2700.00, 'Frio', 'Brasil', 'RS', 2,4),
     ('Gramado', 'Cidade turística famosa pelo clima frio e arquitetura charmosa.', 'Junho', 3200.00, 'Neve', 'Brasil', 'RS', 2,4),
@@ -64,9 +64,9 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('São Paulo', 'A maior cidade do Brasil, com grande oferta cultural.', 'Janeiro', 2500.00, 'Quente', 'Brasil', 'SP', 3,4),
     ('São Paulo', 'A maior cidade do Brasil, com grande oferta cultural.', 'Fevereiro', 2300.00, 'Quente', 'Brasil', 'SP', 3,4),
-    ('São Paulo', 'A maior cidade do Brasil, com grande oferta cultural.', 'Março', 2200.00, 'Quente', 'Brasil', 'SP', 3,4),
-    ('São Paulo', 'A maior cidade do Brasil, com grande oferta cultural.', 'Abril', 2000.00, 'Úmido', 'Brasil', 'SP', 3,4),
-    ('São Paulo', 'A maior cidade do Brasil, com grande oferta cultural.', 'Maio', 2100.00, 'Úmido', 'Brasil', 'SP', 3,4),
+    ('São Paulo', 'A maior cidade do Brasil, com grande oferta cultural.', 'Marco', 2200.00, 'Quente', 'Brasil', 'SP', 3,4),
+    ('São Paulo', 'A maior cidade do Brasil, com grande oferta cultural.', 'Abril', 2000.00, 'Umido', 'Brasil', 'SP', 3,4),
+    ('São Paulo', 'A maior cidade do Brasil, com grande oferta cultural.', 'Maio', 2100.00, 'Umido', 'Brasil', 'SP', 3,4),
     ('São Paulo', 'A maior cidade do Brasil, com grande oferta cultural.', 'Junho', 2200.00, 'Frio', 'Brasil', 'SP', 3,4),
     ('São Paulo', 'A maior cidade do Brasil, com grande oferta cultural.', 'Julho', 2300.00, 'Frio', 'Brasil', 'SP', 3,4),
     ('São Paulo', 'A maior cidade do Brasil, com grande oferta cultural.', 'Agosto', 2200.00, 'Frio', 'Brasil', 'SP', 3,4),
@@ -80,9 +80,9 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Belo Horizonte', 'Capital de Minas Gerais, conhecida pela culinária e vida noturna vibrante.', 'Janeiro', 2000.00, 'Quente', 'Brasil', 'MG', 4,3),
     ('Belo Horizonte', 'Capital de Minas Gerais, conhecida pela culinária e vida noturna vibrante.', 'Fevereiro', 1800.00, 'Quente', 'Brasil', 'MG', 4,3),
-    ('Belo Horizonte', 'Capital de Minas Gerais, conhecida pela culinária e vida noturna vibrante.', 'Março', 1700.00, 'Quente', 'Brasil', 'MG', 4,3),
-    ('Belo Horizonte', 'Capital de Minas Gerais, conhecida pela culinária e vida noturna vibrante.', 'Abril', 1500.00, 'Úmido', 'Brasil', 'MG', 4,3),
-    ('Belo Horizonte', 'Capital de Minas Gerais, conhecida pela culinária e vida noturna vibrante.', 'Maio', 1600.00, 'Úmido', 'Brasil', 'MG', 4,3),
+    ('Belo Horizonte', 'Capital de Minas Gerais, conhecida pela culinária e vida noturna vibrante.', 'Marco', 1700.00, 'Quente', 'Brasil', 'MG', 4,3),
+    ('Belo Horizonte', 'Capital de Minas Gerais, conhecida pela culinária e vida noturna vibrante.', 'Abril', 1500.00, 'Umido', 'Brasil', 'MG', 4,3),
+    ('Belo Horizonte', 'Capital de Minas Gerais, conhecida pela culinária e vida noturna vibrante.', 'Maio', 1600.00, 'Umido', 'Brasil', 'MG', 4,3),
     ('Belo Horizonte', 'Capital de Minas Gerais, conhecida pela culinária e vida noturna vibrante.', 'Junho', 1700.00, 'Frio', 'Brasil', 'MG', 4,3),
     ('Belo Horizonte', 'Capital de Minas Gerais, conhecida pela culinária e vida noturna vibrante.', 'Julho', 1800.00, 'Frio', 'Brasil', 'MG', 4,3),
     ('Belo Horizonte', 'Capital de Minas Gerais, conhecida pela culinária e vida noturna vibrante.', 'Agosto', 1900.00, 'Frio', 'Brasil', 'MG', 4,3),
@@ -96,7 +96,7 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Curitiba', 'Capital do Paraná, famosa pelos parques e pela arquitetura moderna.', 'Janeiro', 2200.00, 'Frio', 'Brasil', 'PR', 5,3),
     ('Curitiba', 'Capital do Paraná, famosa pelos parques e pela arquitetura moderna.', 'Fevereiro', 2000.00, 'Frio', 'Brasil', 'PR', 5,3),
-    ('Curitiba', 'Capital do Paraná, famosa pelos parques e pela arquitetura moderna.', 'Março', 1900.00, 'Frio', 'Brasil', 'PR', 5,3),
+    ('Curitiba', 'Capital do Paraná, famosa pelos parques e pela arquitetura moderna.', 'Marco', 1900.00, 'Frio', 'Brasil', 'PR', 5,3),
     ('Curitiba', 'Capital do Paraná, famosa pelos parques e pela arquitetura moderna.', 'Abril', 1700.00, 'Frio', 'Brasil', 'PR', 5,3),
     ('Curitiba', 'Capital do Paraná, famosa pelos parques e pela arquitetura moderna.', 'Maio', 1800.00, 'Frio', 'Brasil', 'PR', 5,3),
     ('Curitiba', 'Capital do Paraná, famosa pelos parques e pela arquitetura moderna.', 'Junho', 1900.00, 'Frio', 'Brasil', 'PR', 5,3),
@@ -112,7 +112,7 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Natal', 'Capital do Rio Grande do Norte, famosa pelas praias paradisíacas e pelo clima quente.', 'Janeiro', 2500.00, 'Quente', 'Brasil', 'RN', 6,4),
     ('Natal', 'Capital do Rio Grande do Norte, famosa pelas praias paradisíacas e pelo clima quente.', 'Fevereiro', 2300.00, 'Quente', 'Brasil', 'RN', 6,4),
-    ('Natal', 'Capital do Rio Grande do Norte, famosa pelas praias paradisíacas e pelo clima quente.', 'Março', 2200.00, 'Quente', 'Brasil', 'RN', 6,4),
+    ('Natal', 'Capital do Rio Grande do Norte, famosa pelas praias paradisíacas e pelo clima quente.', 'Marco', 2200.00, 'Quente', 'Brasil', 'RN', 6,4),
     ('Natal', 'Capital do Rio Grande do Norte, famosa pelas praias paradisíacas e pelo clima quente.', 'Abril', 2000.00, 'Quente', 'Brasil', 'RN', 6,4),
     ('Natal', 'Capital do Rio Grande do Norte, famosa pelas praias paradisíacas e pelo clima quente.', 'Maio', 2100.00, 'Quente', 'Brasil', 'RN', 6,4),
     ('Natal', 'Capital do Rio Grande do Norte, famosa pelas praias paradisíacas e pelo clima quente.', 'Junho', 2200.00, 'Quente', 'Brasil', 'RN', 6,4),
@@ -128,7 +128,7 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Aracaju', 'Capital de Sergipe, conhecida pelas praias tranquilas e pelo clima quente.', 'Janeiro', 2400.00, 'Quente', 'Brasil', 'SE', 7,4),
     ('Aracaju', 'Capital de Sergipe, conhecida pelas praias tranquilas e pelo clima quente.', 'Fevereiro', 2200.00, 'Quente', 'Brasil', 'SE', 7,4),
-    ('Aracaju', 'Capital de Sergipe, conhecida pelas praias tranquilas e pelo clima quente.', 'Março', 2100.00, 'Quente', 'Brasil', 'SE', 7,4),
+    ('Aracaju', 'Capital de Sergipe, conhecida pelas praias tranquilas e pelo clima quente.', 'Marco', 2100.00, 'Quente', 'Brasil', 'SE', 7,4),
     ('Aracaju', 'Capital de Sergipe, conhecida pelas praias tranquilas e pelo clima quente.', 'Abril', 1900.00, 'Quente', 'Brasil', 'SE', 7,4),
     ('Aracaju', 'Capital de Sergipe, conhecida pelas praias tranquilas e pelo clima quente.', 'Maio', 2000.00, 'Quente', 'Brasil', 'SE', 7,4),
     ('Aracaju', 'Capital de Sergipe, conhecida pelas praias tranquilas e pelo clima quente.', 'Junho', 2100.00, 'Quente', 'Brasil', 'SE', 7,4),
@@ -144,7 +144,7 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Porto Seguro', 'Famoso destino turístico na Bahia, com praias lindas e muita história.', 'Janeiro', 2600.00, 'Quente', 'Brasil', 'BA', 8,5),
     ('Porto Seguro', 'Famoso destino turístico na Bahia, com praias lindas e muita história.', 'Fevereiro', 2400.00, 'Quente', 'Brasil', 'BA', 8,5),
-    ('Porto Seguro', 'Famoso destino turístico na Bahia, com praias lindas e muita história.', 'Março', 2300.00, 'Quente', 'Brasil', 'BA', 8,5),
+    ('Porto Seguro', 'Famoso destino turístico na Bahia, com praias lindas e muita história.', 'Marco', 2300.00, 'Quente', 'Brasil', 'BA', 8,5),
     ('Porto Seguro', 'Famoso destino turístico na Bahia, com praias lindas e muita história.', 'Abril', 2100.00, 'Quente', 'Brasil', 'BA', 8,5),
     ('Porto Seguro', 'Famoso destino turístico na Bahia, com praias lindas e muita história.', 'Maio', 2200.00, 'Quente', 'Brasil', 'BA', 8,5),
     ('Porto Seguro', 'Famoso destino turístico na Bahia, com praias lindas e muita história.', 'Junho', 2300.00, 'Quente', 'Brasil', 'BA', 8,5),
@@ -160,7 +160,7 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem,  orcamen
 VALUES
     ('Cancún', 'É um dos destinos mais populares do Caribe, conhecido por suas praias exuberantes, vida noturna agitada e resorts all inclusive.', 'Janeiro', 8000.00, 'Quente','México','Quintana Roo', 9,5),
     ('Cancún', 'É um dos destinos mais populares do Caribe, conhecido por suas praias exuberantes, vida noturna agitada e resorts all inclusive.', 'Fevereiro', 8500.00, 'Quente','México','Quintana Roo', 9,5),
-    ('Cancún', 'É um dos destinos mais populares do Caribe, conhecido por suas praias exuberantes, vida noturna agitada e resorts all inclusive.', 'Março', 7100.00, 'Quente','México','Quintana Roo', 9,5),
+    ('Cancún', 'É um dos destinos mais populares do Caribe, conhecido por suas praias exuberantes, vida noturna agitada e resorts all inclusive.', 'Marco', 7100.00, 'Quente','México','Quintana Roo', 9,5),
     ('Cancún', 'É um dos destinos mais populares do Caribe, conhecido por suas praias exuberantes, vida noturna agitada e resorts all inclusive.', 'Abril', 6900.00, 'Quente','México','Quintana Roo', 9,5),
     ('Cancún', 'É um dos destinos mais populares do Caribe, conhecido por suas praias exuberantes, vida noturna agitada e resorts all inclusive.', 'Maio', 5900.00, 'Quente','México','Quintana Roo', 9,5),
     ('Cancún', 'É um dos destinos mais populares do Caribe, conhecido por suas praias exuberantes, vida noturna agitada e resorts all inclusive.', 'Junho', 5800.00, 'Quente','México','Quintana Roo', 9,5),
@@ -176,7 +176,7 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem,  orcamen
 VALUES
     ('Aruba', 'É famosa por suas praias de areia branca, águas cristalinas e clima quente e seco.', 'Janeiro', 10000.00, 'Quente','Aruba','Caribe', 10,6),
     ('Aruba', 'É famosa por suas praias de areia branca, águas cristalinas e clima quente e seco.', 'Fevereiro', 10400.00, 'Quente','Aruba','Caribe', 10,6),
-    ('Aruba', 'É famosa por suas praias de areia branca, águas cristalinas e clima quente e seco.', 'Março', 10100.00, 'Quente','Aruba','Caribe', 10,6),
+    ('Aruba', 'É famosa por suas praias de areia branca, águas cristalinas e clima quente e seco.', 'Marco', 10100.00, 'Quente','Aruba','Caribe', 10,6),
     ('Aruba', 'É famosa por suas praias de areia branca, águas cristalinas e clima quente e seco.', 'Abril', 9930.00, 'Quente','Aruba','Caribe', 10,6),
     ('Aruba', 'É famosa por suas praias de areia branca, águas cristalinas e clima quente e seco.', 'Maio', 9900.00, 'Quente','Aruba','Caribe', 10,6),
     ('Aruba', 'É famosa por suas praias de areia branca, águas cristalinas e clima quente e seco.', 'Junho', 10800.00, 'Quente','Aruba','Caribe', 10,6),
@@ -192,7 +192,7 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem,  orcamen
 VALUES
     ('Punta Cana', 'É famosa por suas praias paradisíacas, resorts all inclusive de luxo e campos de golfe.', 'Janeiro', 8000.00, 'Quente','República Dominicana','La Altagracia', 11,7),
     ('Punta Cana', 'É famosa por suas praias paradisíacas, resorts all inclusive de luxo e campos de golfe.', 'Fevereiro', 7940.00, 'Quente','República Dominicana','La Altagracia', 11,7),
-    ('Punta Cana', 'É famosa por suas praias paradisíacas, resorts all inclusive de luxo e campos de golfe.', 'Março', 8100.00, 'Quente','República Dominicana','La Altagracia', 11,7),
+    ('Punta Cana', 'É famosa por suas praias paradisíacas, resorts all inclusive de luxo e campos de golfe.', 'Marco', 8100.00, 'Quente','República Dominicana','La Altagracia', 11,7),
     ('Punta Cana', 'É famosa por suas praias paradisíacas, resorts all inclusive de luxo e campos de golfe.', 'Abril', 8030.00, 'Quente','República Dominicana','La Altagracia', 11,7),
     ('Punta Cana', 'É famosa por suas praias paradisíacas, resorts all inclusive de luxo e campos de golfe.', 'Maio', 6900.00, 'Quente','República Dominicana','La Altagracia', 11,7),
     ('Punta Cana', 'É famosa por suas praias paradisíacas, resorts all inclusive de luxo e campos de golfe.', 'Junho', 7500.00, 'Quente','República Dominicana','La Altagracia', 11,7),
@@ -208,7 +208,7 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Barbados', 'Possui uma rica cultura e história, praias, golfe, cricket e trilhas.', 'Janeiro', 10000.00, 'Quente', 'Barbados', 'Pequenas Antilhas', 12,5),
     ('Barbados', 'Possui uma rica cultura e história, praias, golfe, cricket e trilhas.', 'Fevereiro', 10400.00, 'Quente', 'Barbados', 'Pequenas Antilhas', 12,5),
-    ('Barbados', 'Possui uma rica cultura e história, praias, golfe, cricket e trilhas.', 'Março', 10100.00, 'Quente', 'Barbados', 'Pequenas Antilhas', 12,5),
+    ('Barbados', 'Possui uma rica cultura e história, praias, golfe, cricket e trilhas.', 'Marco', 10100.00, 'Quente', 'Barbados', 'Pequenas Antilhas', 12,5),
     ('Barbados', 'Possui uma rica cultura e história, praias, golfe, cricket e trilhas.', 'Abril', 9930.00, 'Quente', 'Barbados', 'Pequenas Antilhas', 12,5),
     ('Barbados', 'Possui uma rica cultura e história, praias, golfe, cricket e trilhas.', 'Maio', 9900.00, 'Quente', 'Barbados', 'Pequenas Antilhas', 12,5),
     ('Barbados', 'Possui uma rica cultura e história, praias, golfe, cricket e trilhas.', 'Junho', 10800.00, 'Quente', 'Barbados', 'Pequenas Antilhas', 12,5),
@@ -224,23 +224,23 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Janeiro', 6000.00, 'Quente', 'San Andrés', 'Colômbia', 13,5),
     ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Fevereiro', 6400.00, 'Quente', 'San Andrés', 'Colômbia', 13,5),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Março', 6100.00, 'Quente', 'San Andrés', 'Colômbia', 13,5),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Marco', 6100.00, 'Quente', 'San Andrés', 'Colômbia', 13,5),
     ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Abril', 6050.00, 'Quente', 'San Andrés', 'Colômbia', 13,5),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Maio', 5000.00, 'Úmido', 'San Andrés', 'Colômbia', 13,5),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Junho', 5900.00, 'Úmido', 'San Andrés', 'Colômbia', 13,5),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Julho', 5950.00, 'Úmido', 'San Andrés', 'Colômbia', 13,5),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Agosto', 4500.00, 'Úmido', 'San Andrés', 'Colômbia', 13,5),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Setembro', 4700.00, 'Úmido', 'San Andrés', 'Colômbia', 13,5),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Outubro', 5300.00, 'Úmido', 'San Andrés', 'Colômbia', 13,5),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Novembro', 5700.00, 'Úmido', 'San Andrés', 'Colômbia', 13,5),
-    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Dezembro', 5800.00, 'Úmido', 'San Andrés', 'Colômbia', 13,5);
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Maio', 5000.00, 'Umido', 'San Andrés', 'Colômbia', 13,5),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Junho', 5900.00, 'Umido', 'San Andrés', 'Colômbia', 13,5),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Julho', 5950.00, 'Umido', 'San Andrés', 'Colômbia', 13,5),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Agosto', 4500.00, 'Umido', 'San Andrés', 'Colômbia', 13,5),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Setembro', 4700.00, 'Umido', 'San Andrés', 'Colômbia', 13,5),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Outubro', 5300.00, 'Umido', 'San Andrés', 'Colômbia', 13,5),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Novembro', 5700.00, 'Umido', 'San Andrés', 'Colômbia', 13,5),
+    ('San Andrés', 'É conhecido por suas praias exuberantes, recifes de coral e atmosfera relaxada.', 'Dezembro', 5800.00, 'Umido', 'San Andrés', 'Colômbia', 13,5);
 
 -- Bariloche
 INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcamento, clima, pais, estado, imagem_id, diarias_ideais)
 VALUES
     ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Janeiro', 5000.00, 'Frio', 'Argentina', 'Rio Negro', 14 ,5),
     ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Fevereiro', 5400.00, 'Frio', 'Argentina', 'Rio Negro', 14 ,5),
-    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Março', 6100.00, 'Frio', 'Argentina', 'Rio Negro', 14 ,5),
+    ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Marco', 6100.00, 'Frio', 'Argentina', 'Rio Negro', 14 ,5),
     ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Abril', 6050.00, 'Frio', 'Argentina', 'Rio Negro', 14 ,5),
     ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Maio', 7000.00, 'Neve', 'Argentina', 'Rio Negro', 14 ,5),
     ('Bariloche', 'É conhecida como a "Suíça Argentina". Bariloche é um dos destinos mais populares para quem busca neve na América do Sul.', 'Junho', 7900.00, 'Neve', 'Argentina', 'Rio Negro', 14 ,5),
@@ -256,7 +256,7 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Janeiro', 7000.00, 'Frio', 'Argentina', 'Tierra del Fuego', 15 , 5),
     ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Fevereiro', 7400.00, 'Frio', 'Argentina', 'Tierra del Fuego', 15 , 5),
-    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Março', 7100.00, 'Frio', 'Argentina', 'Tierra del Fuego', 15 , 5),
+    ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Marco', 7100.00, 'Frio', 'Argentina', 'Tierra del Fuego', 15 , 5),
     ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Abril', 7250.00, 'Frio', 'Argentina', 'Tierra del Fuego', 15 , 5),
     ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Maio', 7200.00, 'Neve', 'Argentina', 'Tierra del Fuego', 15 , 5),
     ('Ushuaia', 'É a cidade mais austral do mundo, apresentando paisagens incríveis. No inverno, a região é coberta de neve, proporcionando um cenário mágico.', 'Junho', 8900.00, 'Neve', 'Argentina', 'Tierra del Fuego', 15 , 5),
@@ -272,10 +272,10 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Janeiro', 7000.00, 'Frio', 'França', 'Île-de-France', 16 , 5),
     ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Fevereiro', 7200.00, 'Frio', 'França', 'Île-de-France', 16 , 5),
-    ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Março', 7500.00, 'Frio', 'França', 'Île-de-France', 16 , 5),
-    ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Abril', 7800.00, 'Úmido', 'França', 'Île-de-France', 16 , 5),
-    ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Maio', 8000.00, 'Úmido', 'França', 'Île-de-France', 16 , 5),
-    ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Junho', 8200.00, 'Úmido', 'França', 'Île-de-France', 16 , 5),
+    ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Marco', 7500.00, 'Frio', 'França', 'Île-de-France', 16 , 5),
+    ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Abril', 7800.00, 'Umido', 'França', 'Île-de-France', 16 , 5),
+    ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Maio', 8000.00, 'Umido', 'França', 'Île-de-France', 16 , 5),
+    ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Junho', 8200.00, 'Umido', 'França', 'Île-de-France', 16 , 5),
     ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Julho', 9000.00, 'Quente', 'França', 'Île-de-France', 16 , 5),
     ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Agosto', 8800.00, 'Quente', 'França', 'Île-de-France', 16 , 5),
     ('Paris', 'A cidade luz é famosa por sua cultura, gastronomia, história e arquitetura. A Torre Eiffel é um dos principais pontos turísticos.', 'Setembro', 8700.00, 'Quente', 'França', 'Île-de-France', 16 , 5),
@@ -288,9 +288,9 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Buenos Aires', 'A capital da Argentina é conhecida pela sua arquitetura de influência europeia, tango e excelente gastronomia.', 'Janeiro', 5000.00, 'Quente', 'Argentina', 'Buenos Aires', 17 , 4),
     ('Buenos Aires', 'A capital da Argentina é conhecida pela sua arquitetura de influência europeia, tango e excelente gastronomia.', 'Fevereiro', 5300.00, 'Quente', 'Argentina', 'Buenos Aires', 17 , 4),
-    ('Buenos Aires', 'A capital da Argentina é conhecida pela sua arquitetura de influência europeia, tango e excelente gastronomia.', 'Março', 5500.00, 'Quente', 'Argentina', 'Buenos Aires', 17 , 4),
-    ('Buenos Aires', 'A capital da Argentina é conhecida pela sua arquitetura de influência europeia, tango e excelente gastronomia.', 'Abril', 5700.00, 'Úmido', 'Argentina', 'Buenos Aires', 17 , 4),
-    ('Buenos Aires', 'A capital da Argentina é conhecida pela sua arquitetura de influência europeia, tango e excelente gastronomia.', 'Maio', 5800.00, 'Úmido', 'Argentina', 'Buenos Aires', 17 , 4),
+    ('Buenos Aires', 'A capital da Argentina é conhecida pela sua arquitetura de influência europeia, tango e excelente gastronomia.', 'Marco', 5500.00, 'Quente', 'Argentina', 'Buenos Aires', 17 , 4),
+    ('Buenos Aires', 'A capital da Argentina é conhecida pela sua arquitetura de influência europeia, tango e excelente gastronomia.', 'Abril', 5700.00, 'Umido', 'Argentina', 'Buenos Aires', 17 , 4),
+    ('Buenos Aires', 'A capital da Argentina é conhecida pela sua arquitetura de influência europeia, tango e excelente gastronomia.', 'Maio', 5800.00, 'Umido', 'Argentina', 'Buenos Aires', 17 , 4),
     ('Buenos Aires', 'A capital da Argentina é conhecida pela sua arquitetura de influência europeia, tango e excelente gastronomia.', 'Junho', 6000.00, 'Frio', 'Argentina', 'Buenos Aires', 17 , 4),
     ('Buenos Aires', 'A capital da Argentina é conhecida pela sua arquitetura de influência europeia, tango e excelente gastronomia.', 'Julho', 6200.00, 'Frio', 'Argentina', 'Buenos Aires', 17 , 4),
     ('Buenos Aires', 'A capital da Argentina é conhecida pela sua arquitetura de influência europeia, tango e excelente gastronomia.', 'Agosto', 6300.00, 'Frio', 'Argentina', 'Buenos Aires', 17 , 4),
@@ -304,9 +304,9 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Roma', 'A capital italiana é famosa pela sua história, arte e gastronomia, sendo um dos principais destinos turísticos do mundo.', 'Janeiro', 7000.00, 'Frio', 'Itália', 'Lazio', 18 , 6),
     ('Roma', 'A capital italiana é famosa pela sua história, arte e gastronomia, sendo um dos principais destinos turísticos do mundo.', 'Fevereiro', 7200.00, 'Frio', 'Itália', 'Lazio', 18 , 6),
-    ('Roma', 'A capital italiana é famosa pela sua história, arte e gastronomia, sendo um dos principais destinos turísticos do mundo.', 'Março', 7500.00, 'Frio', 'Itália', 'Lazio', 18 , 6),
-    ('Roma', 'A capital italiana é famosa pela sua história, arte e gastronomia, sendo um dos principais destinos turísticos do mundo.', 'Abril', 8000.00, 'Úmido', 'Itália', 'Lazio', 18 , 6),
-    ('Roma', 'A capital italiana é famosa pela sua história, arte e gastronomia, sendo um dos principais destinos turísticos do mundo.', 'Maio', 8500.00, 'Úmido', 'Itália', 'Lazio', 18 , 6),
+    ('Roma', 'A capital italiana é famosa pela sua história, arte e gastronomia, sendo um dos principais destinos turísticos do mundo.', 'Marco', 7500.00, 'Frio', 'Itália', 'Lazio', 18 , 6),
+    ('Roma', 'A capital italiana é famosa pela sua história, arte e gastronomia, sendo um dos principais destinos turísticos do mundo.', 'Abril', 8000.00, 'Umido', 'Itália', 'Lazio', 18 , 6),
+    ('Roma', 'A capital italiana é famosa pela sua história, arte e gastronomia, sendo um dos principais destinos turísticos do mundo.', 'Maio', 8500.00, 'Umido', 'Itália', 'Lazio', 18 , 6),
     ('Roma', 'A capital italiana é famosa pela sua história, arte e gastronomia, sendo um dos principais destinos turísticos do mundo.', 'Junho', 9000.00, 'Quente', 'Itália', 'Lazio', 18 , 6),
     ('Roma', 'A capital italiana é famosa pela sua história, arte e gastronomia, sendo um dos principais destinos turísticos do mundo.', 'Julho', 9500.00, 'Quente', 'Itália', 'Lazio', 18 , 6),
     ('Roma', 'A capital italiana é famosa pela sua história, arte e gastronomia, sendo um dos principais destinos turísticos do mundo.', 'Agosto', 9300.00, 'Quente', 'Itália', 'Lazio', 18 , 6),
@@ -318,31 +318,31 @@ VALUES
 -- Londres
 INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcamento, clima, pais, estado, imagem_id, diarias_ideais)
 VALUES
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Janeiro', 7500.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5),
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Fevereiro', 7700.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5),
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Março', 8000.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5),
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Abril', 8200.00, 'Úmido', 'Reino Unido', 'Inglaterra', 19, 5),
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Maio', 8500.00, 'Úmido', 'Reino Unido', 'Inglaterra', 19, 5),
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Junho', 8800.00, 'Úmido', 'Reino Unido', 'Inglaterra', 19, 5),
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Julho', 9200.00, 'Quente', 'Reino Unido', 'Inglaterra', 19, 5),
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Agosto', 9000.00, 'Quente', 'Reino Unido', 'Inglaterra', 19, 5),
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Setembro', 8800.00, 'Úmido', 'Reino Unido', 'Inglaterra', 19, 5),
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Outubro', 8500.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5),
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Novembro', 8000.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5),
-    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e úmido.', 'Dezembro', 7700.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5);
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Janeiro', 7500.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5),
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Fevereiro', 7700.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5),
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Marco', 8000.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5),
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Abril', 8200.00, 'Umido', 'Reino Unido', 'Inglaterra', 19, 5),
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Maio', 8500.00, 'Umido', 'Reino Unido', 'Inglaterra', 19, 5),
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Junho', 8800.00, 'Umido', 'Reino Unido', 'Inglaterra', 19, 5),
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Julho', 9200.00, 'Quente', 'Reino Unido', 'Inglaterra', 19, 5),
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Agosto', 9000.00, 'Quente', 'Reino Unido', 'Inglaterra', 19, 5),
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Setembro', 8800.00, 'Umido', 'Reino Unido', 'Inglaterra', 19, 5),
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Outubro', 8500.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5),
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Novembro', 8000.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5),
+    ('Londres', 'A capital britânica é famosa pela sua história, cultura, museus e pela Torre de Londres. O clima é geralmente temperado e Umido.', 'Dezembro', 7700.00, 'Frio', 'Reino Unido', 'Inglaterra', 19, 5);
 
 -- Tóquio
 INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcamento, clima, pais, estado, imagem_id, diarias_ideais)
 VALUES
     ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Janeiro', 8000.00, 'Frio', 'Japão', 'Tóquio', 20, 6),
     ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Fevereiro', 8300.00, 'Frio', 'Japão', 'Tóquio', 20, 6),
-    ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Março', 8600.00, 'Frio', 'Japão', 'Tóquio', 20, 6),
-    ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Abril', 9000.00, 'Úmido', 'Japão', 'Tóquio', 20, 6),
-    ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Maio', 9300.00, 'Úmido', 'Japão', 'Tóquio', 20, 6),
-    ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Junho', 9500.00, 'Úmido', 'Japão', 'Tóquio', 20, 6),
+    ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Marco', 8600.00, 'Frio', 'Japão', 'Tóquio', 20, 6),
+    ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Abril', 9000.00, 'Umido', 'Japão', 'Tóquio', 20, 6),
+    ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Maio', 9300.00, 'Umido', 'Japão', 'Tóquio', 20, 6),
+    ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Junho', 9500.00, 'Umido', 'Japão', 'Tóquio', 20, 6),
     ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Julho', 9800.00, 'Quente', 'Japão', 'Tóquio', 20, 6),
     ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Agosto', 9700.00, 'Quente', 'Japão', 'Tóquio', 20, 6),
-    ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Setembro', 9400.00, 'Úmido', 'Japão', 'Tóquio', 20, 6),
+    ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Setembro', 9400.00, 'Umido', 'Japão', 'Tóquio', 20, 6),
     ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Outubro', 9100.00, 'Frio', 'Japão', 'Tóquio', 20, 6),
     ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Novembro', 8800.00, 'Frio', 'Japão', 'Tóquio', 20, 6),
     ('Tóquio', 'Tóquio é uma das cidades mais vibrantes do mundo, com cultura única, excelente gastronomia e tecnologia de ponta.', 'Dezembro', 8500.00, 'Frio', 'Japão', 'Tóquio',20, 6);
@@ -352,13 +352,13 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Janeiro', 8500.00, 'Frio', 'Estados Unidos', 'Nova York', 21, 6),
     ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Fevereiro', 8700.00, 'Frio', 'Estados Unidos', 'Nova York', 21, 6),
-    ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Março', 9000.00, 'Frio', 'Estados Unidos', 'Nova York', 21, 6),
-    ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Abril', 9500.00, 'Úmido', 'Estados Unidos', 'Nova York', 21, 6),
-    ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Maio', 10000.00, 'Úmido', 'Estados Unidos', 'Nova York', 21, 6),
-    ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Junho', 10500.00, 'Úmido', 'Estados Unidos', 'Nova York', 21, 6),
+    ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Marco', 9000.00, 'Frio', 'Estados Unidos', 'Nova York', 21, 6),
+    ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Abril', 9500.00, 'Umido', 'Estados Unidos', 'Nova York', 21, 6),
+    ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Maio', 10000.00, 'Umido', 'Estados Unidos', 'Nova York', 21, 6),
+    ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Junho', 10500.00, 'Umido', 'Estados Unidos', 'Nova York', 21, 6),
     ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Julho', 11000.00, 'Quente', 'Estados Unidos', 'Nova York', 21, 6),
     ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Agosto', 10800.00, 'Quente', 'Estados Unidos', 'Nova York', 21, 6),
-    ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Setembro', 10500.00, 'Úmido', 'Estados Unidos', 'Nova York', 21, 6),
+    ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Setembro', 10500.00, 'Umido', 'Estados Unidos', 'Nova York', 21, 6),
     ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Outubro', 9500.00, 'Frio', 'Estados Unidos', 'Nova York', 21, 6),
     ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Novembro', 9000.00, 'Frio', 'Estados Unidos', 'Nova York', 21, 6),
     ('Nova York', 'Nova York é conhecida por sua cultura vibrante, monumentos icônicos como a Estátua da Liberdade e a Times Square.', 'Dezembro', 8600.00, 'Frio', 'Estados Unidos', 'Nova York', 21, 6);
@@ -368,7 +368,7 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
 VALUES
     ('Miami', 'Miami é famosa por suas praias tropicais, vida noturna animada e cultura latina vibrante.', 'Janeiro', 6000.00, 'Quente', 'Estados Unidos', 'Flórida', 22, 5),
     ('Miami', 'Miami é famosa por suas praias tropicais, vida noturna animada e cultura latina vibrante.', 'Fevereiro', 6200.00, 'Quente', 'Estados Unidos', 'Flórida', 22, 5),
-    ('Miami', 'Miami é famosa por suas praias tropicais, vida noturna animada e cultura latina vibrante.', 'Março', 6500.00, 'Quente', 'Estados Unidos', 'Flórida', 22, 5),
+    ('Miami', 'Miami é famosa por suas praias tropicais, vida noturna animada e cultura latina vibrante.', 'Marco', 6500.00, 'Quente', 'Estados Unidos', 'Flórida', 22, 5),
     ('Miami', 'Miami é famosa por suas praias tropicais, vida noturna animada e cultura latina vibrante.', 'Abril', 6800.00, 'Quente', 'Estados Unidos', 'Flórida', 22, 5),
     ('Miami', 'Miami é famosa por suas praias tropicais, vida noturna animada e cultura latina vibrante.', 'Maio', 7000.00, 'Quente', 'Estados Unidos', 'Flórida', 22, 5),
     ('Miami', 'Miami é famosa por suas praias tropicais, vida noturna animada e cultura latina vibrante.', 'Junho', 7200.00, 'Quente', 'Estados Unidos', 'Flórida', 22, 5),
@@ -383,7 +383,7 @@ VALUES
 INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcamento, clima, pais, estado, imagem_id, diarias_ideais)
     ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Janeiro',  9000.00, 'Frio','Chile', ' Lo Barnechea', 23,6),
     ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Fevereiro',  9400.00, 'Frio','Chile', ' Lo Barnechea', 23,6),
-    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Março',  9100.00, 'Frio','Chile', ' Lo Barnechea', 23,6),
+    ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Marco',  9100.00, 'Frio','Chile', ' Lo Barnechea', 23,6),
     ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Abril',  9250.00, 'Frio','Chile', ' Lo Barnechea', 23,6),
     ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Maio',  12200.00, 'Frio','Chile', ' Lo Barnechea', 23,6),
     ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Junho',  15000.00, 'Frio','Chile', ' Lo Barnechea', 23,6),
@@ -395,11 +395,11 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
     ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Dezembro',  12900.00, 'Frio','Chile', ' Lo Barnechea', 23,6);
 
 -- Huaraz
-INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
+INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcamento, tipo_destino, pais, estado, imagem_id)
 VALUES
     ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Janeiro',  3000.00, 'Frio','Peru', ' Ancash', 24,6),
     ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Fevereiro',  3400.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Março',  4100.00, 'Frio','Peru', ' Ancash', 24,6),
+    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Marco',  4100.00, 'Frio','Peru', ' Ancash', 24,6),
     ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Abril',  4250.00, 'Frio','Peru', ' Ancash', 24,6),
     ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Maio',  4200.00, 'Frio','Peru', ' Ancash', 24,6),
     ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Junho',  5000.00, 'Frio','Peru', ' Ancash', 24,6),
@@ -411,11 +411,11 @@ VALUES
     ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Dezembro',  2900.00, 'Frio','Peru', ' Ancash', 24,6);
 
 --Seul
-INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, numero_pessoas, orcamento, tipo_destino, pais, estado, imagem_id)
+INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcamento, tipo_destino, pais, estado, imagem_id)
 VALUES
     ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Janeiro',  7000.00, 'Frio','Coréia do Sul', 'Sudogwon', 25,5),
     ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Fevereiro',  7400.00, 'Frio','Coréia do Sul', 'Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Março',  6100.00, 'Frio','Coréia do Sul', ' Sudogwon', 25,5),
+    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Marco',  6100.00, 'Frio','Coréia do Sul', ' Sudogwon', 25,5),
     ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Abril',  6250.00, 'Quente','Coréia do Sul', ' Sudogwon', 25,5),
     ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Maio',  625,50.00, 'Quente','Coréia do Sul', ' Sudogwon', 25,5),
     ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Junho',  5000.00, 'Quente','Coréia do Sul', ' Sudogwon', 25,5),

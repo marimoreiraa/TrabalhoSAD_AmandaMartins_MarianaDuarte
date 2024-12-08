@@ -77,7 +77,7 @@ class RecomendacaoDAL:
     def _recomendar_por_diarias(self, diarias,mes):
         query = """
             SELECT * FROM destino
-            WHERE mes_viagem = %s AND diarias_ideais >= %s
+            WHERE mes_viagem = %s AND diarias_ideais <= %s
         """
         params = (mes,diarias)
         return self.db.execute_query(query, params)

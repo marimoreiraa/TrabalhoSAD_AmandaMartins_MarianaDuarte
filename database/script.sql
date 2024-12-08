@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS guia_mochileiro_pobre.usuario (
 CREATE TABLE IF NOT EXISTS guia_mochileiro_pobre.perfil_viagem (
     id INT AUTO_INCREMENT PRIMARY KEY,
     usuario_id INT NOT NULL,
-    mes_viagem ENUM('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro') NOT NULL, 
+    mes_viagem ENUM('Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro') NOT NULL, 
     orcamento FLOAT,
     diarias INT,
     clima ENUM('Quente', 'Frio','Umido','Seco','Neve'),
@@ -27,10 +27,10 @@ CREATE TABLE IF NOT EXISTS guia_mochileiro_pobre.destino (
     estado VARCHAR(100) NOT NULL,
     descricao TEXT NOT NULL,
     imagem_id INT,
-    mes_viagem ENUM('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro') NOT NULL,
+    mes_viagem ENUM('Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro') NOT NULL,
     orcamento FLOAT NOT NULL,
     diarias_ideais INT NOT NULL,
-    clima ENUM('Quente', 'Frio','Úmido','Seco','Neve') NOT NULL,
+    clima ENUM('Quente', 'Frio','Umido','Seco','Neve') NOT NULL,
     FOREIGN KEY (imagem_id) REFERENCES guia_mochileiro_pobre.imagem_destino(id)
 
 );
