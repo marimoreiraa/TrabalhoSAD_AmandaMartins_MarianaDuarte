@@ -393,35 +393,3 @@ INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcament
     ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Outubro',  10300.00, 'Frio','Chile', ' Lo Barnechea', 23,6),
     ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Novembro',  11700.00, 'Frio','Chile', ' Lo Barnechea', 23,6),
     ('Valle Nevado', 'É um dos maiores centros de ski da América do Sul, com pistas para todos os níveis, hotéis de luxo e diversas opções de entretenimento.', 'Dezembro',  12900.00, 'Frio','Chile', ' Lo Barnechea', 23,6);
-
--- Huaraz
-INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcamento, tipo_destino, pais, estado, imagem_id)
-VALUES
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Janeiro',  3000.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Fevereiro',  3400.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Marco',  4100.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Abril',  4250.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Maio',  4200.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Junho',  5000.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Julho',  5550.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Agosto',  5250.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Setembro',  3700.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Outubro',  3300.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Novembro',  2700.00, 'Frio','Peru', ' Ancash', 24,6),
-    ('Huaraz', 'É um destino para aventureiros que buscam trilhas, montanhismo e paisagens andinas. No inverno, algumas regiões recebem neve.', 'Dezembro',  2900.00, 'Frio','Peru', ' Ancash', 24,6);
-
---Seul
-INSERT INTO guia_mochileiro_pobre.destino (nome, descricao, mes_viagem, orcamento, tipo_destino, pais, estado, imagem_id)
-VALUES
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Janeiro',  7000.00, 'Frio','Coréia do Sul', 'Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Fevereiro',  7400.00, 'Frio','Coréia do Sul', 'Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Marco',  6100.00, 'Frio','Coréia do Sul', ' Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Abril',  6250.00, 'Quente','Coréia do Sul', ' Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Maio',  625,50.00, 'Quente','Coréia do Sul', ' Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Junho',  5000.00, 'Quente','Coréia do Sul', ' Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Julho',  5550.00, 'Quente','Coréia do Sul', ' Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Agosto',  7250.00, 'Quente','Coréia do Sul', ' Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Setembro',  6700.00, 'Quente','Coréia do Sul', ' Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Outubro',  6300.00, 'Frio','Coréia do Sul', ' Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Novembro',  6500.00, 'Frio','Coréia do Sul', ' Sudogwon', 25,5),
-    ('Seul', 'Uma cidade moderna e cosmopolita com uma rica história.', 'Dezembro',  5800.00, 'Frio','Coréia do Sul', ' Sudogwon', 25,5);
