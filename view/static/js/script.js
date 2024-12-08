@@ -12,5 +12,3 @@ document.getElementById("cadastro").addEventListener("submit", function(event) {
 
 
 });
-
-

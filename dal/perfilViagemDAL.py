@@ -1,10 +1,9 @@
-import sys
-sys.path.insert(1, '/home/mariana/Documentos/TrabalhoSAD_AmandaMartins_MarianaDuarte/database')
-import database
+from database.database import Database
+from model import perfilviagem
 
 class PerfilViagemDAL:
     def __init__(self):
-        self.db = database.Database()
+        self.db = Database()
 
     def connect(self):
         self.db.connect()
@@ -12,7 +11,13 @@ class PerfilViagemDAL:
     def close(self):
         self.db.close()
 
-    def criar_perfil(self, usuario_id, mes, qtd_pessoas, orcamento, tipo_destino):
+    def criar_perfil(self,perfilViagem):
+        usuario_id = perfilViagem.getUsuarioId()
+        mes = perfilViagem.getMesViagem()
+        qtd_pessoas = perfilViagem.getNumeroPessoas()
+        orcamento = perfilViagem.getOrcamento()
+        tipo_destino = perfilViagem.getTipoDestino()
+
         query = """
             INSERT INTO perfil_viagem (usuario_id, mes_viagem, numero_pessoas, orcamento_por_pessoa, tipo_destino)
             VALUES (%s, %s, %s, %s, %s)

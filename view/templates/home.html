@@ -11,7 +11,7 @@
     <nav class="my-navbar">
         <ul>
             <li><a href="/inicio">Início</a></li>
-            <li><a href="/historico">Histórico</a></li>
+            <li><a href="/inicio/historico">Histórico</a></li>
             <li><a href="/">Sair</a></li>
         </ul>
     </nav>
@@ -19,7 +19,15 @@
     <div class="welcome-box">
         <h2>Olá, {{ nome_usuario }}!</h2>
         <p>Bora planejar sua próxima viagem?</p>
+
+        {% if mensagem %}
+        <script>
+            alert("{{ mensagem }}");
+        </script>
+        {% endif %}
     </div>
+
+
 
     <div class="form-container">
         <form action={{ url_for('recomendacao.inicio') }} method="POST">
@@ -60,13 +68,11 @@
                 <select id="tipo_destino" name="tipo_destino" required>
                     <option value="quente">Quente</option>
                     <option value="frio">Frio</option>
-                    <option value="moderado">Moderado</option>
-                    <option value="umido">Umido</option>
-                    <option value="seco">Seco</option>
                 </select>
             </div>
             <button type="submit" class="btn">Gerar Recomendações</button>
         </form>
     </div>
+    <script src="../static/js/script.js" defer></script>
 </body>
 </html>

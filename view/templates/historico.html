@@ -11,44 +11,30 @@
     <nav class="my-navbar">
         <ul>
             <li><a href="/inicio">Início</a></li>
-            <li><a href="/historico">Histórico</a></li>
+            <li><a href="/inicio/historico">Histórico</a></li>
             <li><a href="/">Sair</a></li>
         </ul>
     </nav>
     <div class="historic-container">
         <div class="historic-recommendations-container">
+            {% for item in historico %}
                 <div class="recomendation-card">
                     <div class="recomendation-info">
-                        <h3>Recomendação 1</h3>
-                        <h3>Gerada no dia: 03/12/2024</h3>
-                        <p>Mês da Viagem: Janeiro</p>
-                        <p>Viagem em: Casal</p>
-                        <p>Tipo: Quente</p>
-                        <p>Orçamento: R$1000</p>
-                        <p>Nível: Simples</p>
+                        <h3>Recomendação {{ loop.index }}</h3>
+                        <h3>Gerada no dia: {{ item.recomendacao.data_recomendacao.strftime('%d/%m/%Y') }}</h3>
+                        <p>Mês da Viagem: {{ item.recomendacao.mes_viagem }}</p>
+                        <p>Viagem em: {{ item.recomendacao.numero_pessoas }}</p>
+                        <p>Tipo: {{ item.recomendacao.tipo_destino }}</p>
+                        <p>Orçamento: R${{ item.recomendacao.orcamento | round(2) }}</p>
                     </div>
                     <div class="recomendations">
-                        <p>Rio de Janeiro - RJ</p>
-                        <p>Ubatuba - SP</p>
+                        {% for destino in item.destinos %}
+                            <p>{{ destino.nome }} - {{ destino.descricao }}</p>
+                        {% endfor %}
                     </div>
                 </div>
-                <div class="recomendation-card">
-                    <div class="recomendation-info">
-                        <h3>Recomendação 2</h3>
-                        <h3>Gerada no dia: 04/12/2024</h3>
-                        <p>Mês da Viagem: Janeiro</p>
-                        <p>Viagem em: Casal</p>
-                        <p>Tipo: Quente</p>
-                        <p>Orçamento: R$1000</p>
-                        <p>Nível: Simples</p>
-                    </div>
-                    <div class="recomendations">
-                        <p>Rio de Janeiro - RJ</p>
-                        <p>Ubatuba - SP</p>
-                    </div>
-                </div>
+            {% endfor %}
         </div>
     </div>
-
 </body>
 </html>

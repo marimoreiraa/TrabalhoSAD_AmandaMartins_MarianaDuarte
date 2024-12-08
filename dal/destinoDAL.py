@@ -1,10 +1,8 @@
-import sys
-sys.path.insert(1, '/home/mariana/Documentos/TrabalhoSAD_AmandaMartins_MarianaDuarte/database')
-import database
+from database.database import Database
 
 class DestinoDAL:
     def __init__(self):
-        self.db = database.Database()
+        self.db = Database()
 
     def connect(self):
         self.db.connect()
@@ -12,6 +10,13 @@ class DestinoDAL:
     def close(self):
         self.db.close()
 
-    def obter_destinos(self):
-        query = "SELECT * FROM destino"
-        return self.db.execute_query(query)
+    def obter_destinos_por_recomendacao(self, recomendacao_id):
+        query = """
+            SELECT d.id, d.nome, d.descricao, i.url
+            FROM destino d
+            JOIN recomendacao_destino rd ON d.id = rd.destino_id
+            JOIN imagem_destino i ON d.imagem_id = i.id
+            WHERE rd.recomendacao_id = %s
+        """
+        params = (recomendacao_id,)
+        return self.db.execute_query(query, params)
