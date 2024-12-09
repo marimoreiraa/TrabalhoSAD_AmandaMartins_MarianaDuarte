@@ -1,6 +1,7 @@
 from flask import Blueprint, Flask, flash, render_template, request, redirect, url_for, session
 from dal import usuarioDAL
 from model.usuario import Usuario
+import bcrypt
 
 usuario_bp = Blueprint('usuario', __name__)
 usuario_dal = usuarioDAL.UsuarioDAL()
@@ -30,15 +31,23 @@ def cadastro():
         email = request.form['email']
         senha = request.form['senha']
 
+        # Verifica se o email já existe no banco
         email_existe = usuario_dal.verificar_email(email)
-        
         if len(email_existe) != 0:
-            return render_template('cadastro.html', mensagem='Usuario ja cadastrado com o email informado')
-        else:
-            usuario = Usuario(None,nome,email,senha)
-            usuario_dal.cadastrar_usuario(usuario)
-            return render_template('login.html')
+            return render_template('cadastro.html', mensagem='Usuário já cadastrado com o email informado')
         
-    else:
-        return render_template('cadastro.html')
+        # Gera o hash da senha no controller
+        salt = bcrypt.gensalt()
+        hash_senha = bcrypt.hashpw(senha.encode('utf-8'), salt).decode('utf-8')
+
+        # Cria o objeto `Usuario` com o hash gerado
+        usuario = Usuario(None, nome, email, hash_senha)
+
+        # Envia o usuário para o DAL
+        usuario_dal.cadastrar_usuario(usuario)
+
+        return render_template('login.html', mensagem='Usuário cadastrado com sucesso!')
+
+    return render_template('cadastro.html')
+
     
