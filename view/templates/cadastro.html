@@ -9,6 +9,11 @@
 </head>
 <body>
     <div class="wrapper-register"> 
+        {% if mensagem %}
+        <script>
+            alert("{{ mensagem }}");
+        </script>
+        {% endif %}
         <form action="{{ url_for('usuario.cadastro') }}" method="POST" id="cadastro">
             <div class="logo">
                 <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo" style="max-width: 100px; max-height: 100px;">
