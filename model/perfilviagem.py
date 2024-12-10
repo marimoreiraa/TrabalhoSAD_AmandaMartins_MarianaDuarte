@@ -24,4 +24,5 @@ class PerfilViagem:
     
     def getClima(self):
         return self.clima
-
+    
+    

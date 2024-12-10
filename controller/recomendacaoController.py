@@ -1,117 +1,113 @@
-from flask import Blueprint, Flask, flash, render_template, request, redirect, url_for, session
-from dal import recomendacoesDAL, perfilViagemDAL, destinoDAL
+from flask import Blueprint, render_template, request, redirect, url_for, session
+from dal.recomendacoesDAL import RecomendacaoPorClima, RecomendacaoPorDiarias, RecomendacaoPorOrcamento
 from model.perfilviagem import PerfilViagem
 from model.recomendacao import Recomendacao
+from dal.recomendacoesDAL_interface import RecomendacaoDALInterface
+from dal.perfilViagemDal_interface import PerfilViagemDALInterface
+from dal.destinoDAL_interface import DestinoDALInterface
 
 recomendacao_bp = Blueprint('recomendacao', __name__)
-recomendacoes_dal = recomendacoesDAL.RecomendacaoDAL()
-perfil_viagem_dal = perfilViagemDAL.PerfilViagemDAL()
-destino_dal = destinoDAL.DestinoDAL()
 
-@recomendacao_bp.route('/', methods=['GET','POST'])
-def inicio():
-    nome_usuario = session.get('nome_usuario', 'Usuario')    
-    return render_template('home.html', nome_usuario=nome_usuario)
+class RecomendacaoController:
+    def __init__(self, recomendacao_dal: RecomendacaoDALInterface, perfil_viagem_dal: PerfilViagemDALInterface, destino_dal: DestinoDALInterface, usuario_controller):
+        self.recomendacao_dal = recomendacao_dal
+        self.perfil_viagem_dal = perfil_viagem_dal
+        self.destino_dal = destino_dal
 
-@recomendacao_bp.route('/recomendacao/orcamento', methods=['GET','POST'])
-def recomendacao_por_orcamento():
-    nome_usuario = session.get('nome_usuario', 'Usuario')
-    id_usuario = session.get('id_usuario', 'ID_Usuario')
+        # Mensagens de feedback
+        self.MENSAGENS = {
+            "erro_sessao": "Sua sessão expirou. Faça login novamente.",
+            "sem_recomendacoes": "Não temos destinos compatíveis com as informações da viagem solicitada.",
+            "historico_vazio": "Você ainda não gerou nenhuma recomendação.",
+        }
 
-    if request.method == 'POST':
-        orcamento = request.form['orcamento']
-        mes = request.form['mes']
-        # Cria o perfil de viagem para o usuário
-        perfil_viagem = PerfilViagem(None,id_usuario,mes,None,orcamento,None)
-        perfil_viagem_id = perfil_viagem_dal.criar_perfil(perfil_viagem)
-        session['perfil_viagem_id'] = perfil_viagem_id
+        # Registrar as rotas
+        recomendacao_bp.add_url_rule('/', view_func=self.inicio, methods=['GET', 'POST'])
+        recomendacao_bp.add_url_rule('/recomendacao/<tipo>', view_func=self.recomendacao, methods=['GET', 'POST'])
+        recomendacao_bp.add_url_rule('/recomendacao/resultado', view_func=self.resultado, methods=['GET', 'POST'])
+        recomendacao_bp.add_url_rule('/historico', view_func=self.historico, methods=['GET'])
 
-        # Gera a recomendação com base no perfil de viagem
-        recomendacao = Recomendacao(None,id_usuario,perfil_viagem_id,'Orcamento',None)
-        recomendacoes_dal.criar_recomendacao(recomendacao,perfil_viagem)
+    def criar_recomendacao(self, tipo, id_usuario, mes, orcamento=None, diarias=None, clima=None):
+        perfil_viagem = PerfilViagem(None, id_usuario, mes, diarias, orcamento, clima)
+        perfil_viagem_id = self.perfil_viagem_dal.criar_perfil(perfil_viagem)
+        recomendacao = Recomendacao(None, id_usuario, perfil_viagem_id, tipo, None)
 
-        return redirect(url_for('recomendacao.resultado'))
-    else:
-        return render_template('recomendacaoOrcamento.html')
+        session['tipo_recomendacao'] = tipo
 
-@recomendacao_bp.route('/recomendacao/diarias', methods=['GET','POST'])
-def recomendacao_por_diarias():
-    nome_usuario = session.get('nome_usuario', 'Usuario')
-    id_usuario = session.get('id_usuario', 'ID_Usuario')
+        # Escolher a implementação do DAL baseada no tipo de recomendação
+        if tipo == 'Orcamento':
+            self.recomendacao_dal = RecomendacaoPorOrcamento()
+        elif tipo == 'Clima':
+            self.recomendacao_dal = RecomendacaoPorClima()
+        elif tipo == 'Diarias':
+            self.recomendacao_dal = RecomendacaoPorDiarias()
 
-    if request.method == 'POST':
-        diarias = request.form['diarias']
-        mes = request.form['mes']
-        # Cria o perfil de viagem para o usuário
-        perfil_viagem = PerfilViagem(None,id_usuario,mes,diarias,None,None)
-        perfil_viagem_id = perfil_viagem_dal.criar_perfil(perfil_viagem)
-        session['perfil_viagem_id'] = perfil_viagem_id
+        if self.recomendacao_dal:
+            self.recomendacao_dal.criar_recomendacao(recomendacao, perfil_viagem)
 
-        # Gera a recomendação com base no perfil de viagem
-        recomendacao = Recomendacao(None,id_usuario,perfil_viagem_id,'Diarias',None)
-        recomendacoes_dal.criar_recomendacao(recomendacao,perfil_viagem)
+        return perfil_viagem_id
 
-        return redirect(url_for('recomendacao.resultado'))
-    else:
-        return render_template('recomendacaoDiarias.html')
+    def _obter_historico_usuario(self, id_usuario):
+        recomendacoes = self.recomendacao_dal.obter_recomendacoes_por_usuario(id_usuario)
+        historico = []
+        for recomendacao in recomendacoes:
+            destinos = self.destino_dal.obter_destinos_por_recomendacao(recomendacao['id'])
+            if destinos:
+                historico.append({"recomendacao": recomendacao, "destinos": destinos})
+        return historico
 
-@recomendacao_bp.route('/recomendacao/clima', methods=['GET','POST'])
-def recomendacao_por_clima():
-    nome_usuario = session.get('nome_usuario', 'Usuario')
-    id_usuario = session.get('id_usuario', 'ID_Usuario')
+    def inicio(self):
+        nome_usuario = session.get('nome_usuario', 'Usuário')
+        return render_template('home.html', nome_usuario=nome_usuario)
 
-    if request.method == 'POST':
-        clima = request.form['clima']
-        mes = request.form['mes']
-        # Cria o perfil de viagem para o usuário
-        perfil_viagem = PerfilViagem(None,id_usuario,mes,None,None,clima)
-        perfil_viagem_id = perfil_viagem_dal.criar_perfil(perfil_viagem)
-        session['perfil_viagem_id'] = perfil_viagem_id
+    def recomendacao(self, tipo):
+        if request.method == 'POST':
+            mes = request.form['mes']
+            parametros = {
+                'Orcamento': {'orcamento': request.form.get('orcamento')},
+                'Diarias': {'diarias': request.form.get('diarias')},
+                'Clima': {'clima': request.form.get('clima')},
+            }
+            if tipo in parametros:
+                perfil_viagem_id = self.criar_recomendacao(tipo, session.get('id_usuario'), mes, **parametros[tipo])
+                session['perfil_viagem_id'] = perfil_viagem_id
+                return redirect(url_for('recomendacao.resultado'))
+        return render_template(f'recomendacao{tipo}.html')
 
-        # Gera a recomendação com base no perfil de viagem
-        recomendacao = Recomendacao(None,id_usuario,perfil_viagem_id,'Clima',None)
-        recomendacoes_dal.criar_recomendacao(recomendacao,perfil_viagem)
+    def resultado(self):
+        nome_usuario = session.get('nome_usuario', 'Usuário')
+        id_usuario = session.get('id_usuario')
+        perfil_viagem_id = session.get('perfil_viagem_id')
 
-        return redirect(url_for('recomendacao.resultado'))
-    else:
-        return render_template('recomendacaoClima.html')
+        if not id_usuario or not perfil_viagem_id:
+            return redirect(url_for('usuario.login'))
 
+        tipo_recomendacao = session.get('tipo_recomendacao')
 
-@recomendacao_bp.route('/recomendacao/resultado', methods=['GET','POST'])
-def resultado():
-    nome_usuario = session.get('nome_usuario', 'Usuario')
-    id_usuario = session.get('id_usuario', 'ID_Usuario')
-    perfil_viagem_id = session.get('perfil_viagem_id', 'Perfil Viagem')
+        if tipo_recomendacao == 'Orcamento':
+            recomendacao_dal = RecomendacaoPorOrcamento()
+        elif tipo_recomendacao == 'Clima':
+            recomendacao_dal = RecomendacaoPorClima()
+        elif tipo_recomendacao == 'Diarias':
+            recomendacao_dal =RecomendacaoPorDiarias()
+        else:
+            return render_template('home.html', nome_usuario=nome_usuario, mensagem="Tipo de recomendação inválido.")
 
-    # Obtem as recomendações geradas para o usuário
-    recomendacao = recomendacoes_dal.obter_recomendacoes_por_usuario_e_perfil(id_usuario, perfil_viagem_id)
-    if len(recomendacao) != 0:
-        destinos = destino_dal.obter_destinos_por_recomendacao(recomendacao[0]['id'])
-        return render_template('recomendacoes.html', recomendacoes=recomendacao, destinos=destinos, nome_usuario=nome_usuario)
-    else:
-        mensagem = "Não temos destinos compatíveis com as informações da viagem solicitada."
-        return render_template('home.html', nome_usuario=nome_usuario, mensagem=mensagem)
-    
-@recomendacao_bp.route('/historico', methods=['GET'])
-def historico():
-    nome_usuario = session.get('nome_usuario', 'Usuário')
-    id_usuario = session.get('id_usuario', 'ID_Usuário')
+        recomendacao = recomendacao_dal.obter_recomendacoes_por_usuario_e_perfil(id_usuario, perfil_viagem_id)
+        
+        if recomendacao:
+            destinos = self.destino_dal.obter_destinos_por_recomendacao(recomendacao[0]['id'])
+            return render_template('recomendacoes.html', recomendacoes=recomendacao, destinos=destinos, nome_usuario=nome_usuario)
 
-    # Busca todas as recomendações feitas para o usuário
-    recomendacoes = recomendacoes_dal.obter_recomendacoes_por_usuario(id_usuario)
-    historico = []
-    for recomendacao in recomendacoes:
-        recomendacao_id = recomendacao['id']
-        # Busca os destinos associados a cada recomendação
-        destinos = destino_dal.obter_destinos_por_recomendacao(recomendacao_id)
-        if len(destinos) != 0:
-            historico.append({
-                "recomendacao": recomendacao,
-                "destinos": destinos
-            })
-    if len(historico) != 0:
-        return render_template('historico.html', historico=historico, nome_usuario=nome_usuario)
-    else:
-        mensagem = "Você ainda não gerou nenhuma recomendação."
-        return render_template('home.html', nome_usuario=nome_usuario, mensagem=mensagem)
+        return render_template('home.html', nome_usuario=nome_usuario, mensagem=self.MENSAGENS['sem_recomendacoes'])
 
+    def historico(self):
+        id_usuario = session.get('id_usuario')
+        if not id_usuario:
+            return redirect(url_for('usuario.login'))
+
+        historico = self._obter_historico_usuario(id_usuario)
+        if historico:
+            return render_template('historico.html', historico=historico, nome_usuario=session.get('nome_usuario'))
+
+        return render_template('home.html', mensagem=self.MENSAGENS['historico_vazio'])

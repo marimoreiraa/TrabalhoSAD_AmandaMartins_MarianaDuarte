@@ -17,7 +17,7 @@
     </nav>
 
     <div class="form-container">
-        <form action="{{ url_for('recomendacao.recomendacao_por_orcamento') }}" method="POST">
+        <form action="{{ url_for('recomendacao.recomendacao',tipo='Orcamento') }}" method="POST">
             <div class="input-box">
                 <label for="mes">Mês da Viagem</label>
                 <select name="mes" id="mes" required>

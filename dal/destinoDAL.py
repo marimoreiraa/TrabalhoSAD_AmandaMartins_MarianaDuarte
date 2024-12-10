@@ -1,6 +1,7 @@
+from dal.destinoDAL_interface import DestinoDALInterface
 from database.database import Database
 
-class DestinoDAL:
+class DestinoDAL(DestinoDALInterface):
     def __init__(self):
         self.db = Database()
 
