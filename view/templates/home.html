@@ -30,12 +30,14 @@
     <div class="recommendation-options">
         <h3>Escolha o tipo de recomendação:</h3>
         <div class="button-group">
-            <a href="{{ url_for('recomendacao.recomendacao_por_orcamento') }}" class="btn">Por Orçamento</a>
-            <a href="{{ url_for('recomendacao.recomendacao_por_diarias') }}" class="btn">Por Diárias</a>
-            <a href="{{ url_for('recomendacao.recomendacao_por_clima') }}" class="btn">Por Clima</a>
+            <!-- Passando o tipo para a URL -->
+            <a href="{{ url_for('recomendacao.recomendacao', tipo='Orcamento') }}" class="btn">Por Orçamento</a>
+            <a href="{{ url_for('recomendacao.recomendacao', tipo='Diarias') }}" class="btn">Por Diárias</a>
+            <a href="{{ url_for('recomendacao.recomendacao', tipo='Clima') }}" class="btn">Por Clima</a>
         </div>
     </div>
     
-    <script src="../static/js/script.js" defer></script>
+    <!-- Caminho correto para o arquivo JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </body>
 </html>

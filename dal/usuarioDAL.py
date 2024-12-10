@@ -1,8 +1,9 @@
+from dal.usuarioDAL_interface import UsuarioDALInterface
 from database.database import Database
 import bcrypt
 from model import usuario
 
-class UsuarioDAL:
+class UsuarioDAL(UsuarioDALInterface):
     def __init__(self):
         self.db = Database()
 
@@ -15,7 +16,7 @@ class UsuarioDAL:
     def cadastrar_usuario(self, usuario):
         nome = usuario.getNome()
         email = usuario.getEmail()
-        senha = usuario.getSenha()  # Agora, o campo `senha` já deve ser o hash.
+        senha = usuario.getSenha() 
 
         query = """
             INSERT INTO usuario (nome, email, senha)

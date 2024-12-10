@@ -1,7 +1,7 @@
+from dal.perfilViagemDal_interface import PerfilViagemDALInterface
 from database.database import Database
-from model import perfilviagem
 
-class PerfilViagemDAL:
+class PerfilViagemDAL(PerfilViagemDALInterface):
     def __init__(self):
         self.db = Database()
 
@@ -11,7 +11,7 @@ class PerfilViagemDAL:
     def close(self):
         self.db.close()
 
-    def criar_perfil(self,perfilViagem):
+    def criar_perfil(self, perfilViagem):
         usuario_id = perfilViagem.getUsuarioId()
         mes = perfilViagem.getMes()
         orcamento = perfilViagem.getOrcamento()
@@ -22,10 +22,10 @@ class PerfilViagemDAL:
             INSERT INTO perfil_viagem (usuario_id, mes_viagem,orcamento, clima, diarias)
             VALUES (%s, %s, %s, %s, %s)
         """
-        params = (usuario_id,mes, orcamento, clima, diarias)
+        params = (usuario_id, mes, orcamento, clima, diarias)
         self.db.execute_query(query, params)
         
-        query = "SELECT MAX(id) AS max_id FROM guia_mochileiro_pobre.perfil_viagem"
+        query = "SELECT MAX(id) AS max_id FROM perfil_viagem"
         result = self.db.execute_query(query)
         perfil_viagem_id = result[0]["max_id"]
         

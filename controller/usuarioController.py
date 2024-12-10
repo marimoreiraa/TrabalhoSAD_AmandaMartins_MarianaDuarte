@@ -1,53 +1,73 @@
-from flask import Blueprint, Flask, flash, render_template, request, redirect, url_for, session
-from dal import usuarioDAL
+from flask import Blueprint, render_template, request, redirect, url_for, session
+from dal.usuarioDAL_interface import UsuarioDALInterface
 from model.usuario import Usuario
 import bcrypt
 
 usuario_bp = Blueprint('usuario', __name__)
-usuario_dal = usuarioDAL.UsuarioDAL()
 
-@usuario_bp.route('/', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        email = request.form['email']
-        senha = request.form['senha']
+class UsuarioController:
+    def __init__(self, usuario_dal: UsuarioDALInterface):
+        self.usuario_dal = usuario_dal
 
-        email_existe = usuario_dal.verificar_email(email)
-        if len(email_existe) == 0:
-            return render_template('login.html', mensagem='Usuario não cadastrado')
-        else:
-            senha_cadastrada = usuario_dal.validar_login(email, senha)
-            if senha_cadastrada is not None:
-                session['nome_usuario'] = email_existe[0]['nome']
-                session['id_usuario'] = email_existe[0]['id']
+        # Mensagens de feedback
+        self.MENSAGENS = {
+            "usuario_nao_cadastrado": "Usuário não cadastrado",
+            "email_ja_cadastrado": "Usuário já cadastrado com o email informado",
+            "cadastro_sucesso": "Usuário cadastrado com sucesso!",
+            "login_invalido": "Email ou senha inválidos",
+        }
+
+        # Registrar as rotas
+        usuario_bp.add_url_rule('/', view_func=self.login, methods=['GET', 'POST'])
+        usuario_bp.add_url_rule('/cadastrar', view_func=self.cadastro, methods=['GET', 'POST'])
+
+    def _buscar_usuario_por_email(self, email):
+        return self.usuario_dal.verificar_email(email)
+
+    def _gerar_hash_senha(self, senha):
+        salt = bcrypt.gensalt()
+        return bcrypt.hashpw(senha.encode('utf-8'), salt).decode('utf-8')
+
+    def _validar_login(self, email, senha):
+        usuario = self.usuario_dal.verificar_email(email)
+        if usuario and bcrypt.checkpw(senha.encode('utf-8'), usuario[0]['senha'].encode('utf-8')):
+            return usuario[0]
+        return None
+
+    def login(self):
+        if request.method == 'POST':
+            email = request.form['email']
+            senha = request.form['senha']
+
+            usuario_existente = self._buscar_usuario_por_email(email)
+            if not usuario_existente:
+                return render_template('login.html', mensagem=self.MENSAGENS['usuario_nao_cadastrado'])
+
+            usuario_validado = self._validar_login(email, senha)
+            if usuario_validado:
+                session['nome_usuario'] = usuario_validado['nome']
+                session['id_usuario'] = usuario_validado['id']
                 return redirect(url_for('recomendacao.inicio'))
-    else:
+
+            return render_template('login.html', mensagem=self.MENSAGENS['login_invalido'])
         return render_template('login.html')
 
-@usuario_bp.route('/cadastrar', methods=['GET', 'POST'])
-def cadastro():
-    if request.method == 'POST':
-        nome = request.form['nome']
-        email = request.form['email']
-        senha = request.form['senha']
+    def cadastro(self):
+        if request.method == 'POST':
+            nome = request.form['nome']
+            email = request.form['email']
+            senha = request.form['senha']
 
-        # Verifica se o email já existe no banco
-        email_existe = usuario_dal.verificar_email(email)
-        if len(email_existe) != 0:
-            return render_template('cadastro.html', mensagem='Usuário já cadastrado com o email informado')
-        
-        # Gera o hash da senha no controller
-        salt = bcrypt.gensalt()
-        hash_senha = bcrypt.hashpw(senha.encode('utf-8'), salt).decode('utf-8')
+            # Verifica se o email já existe
+            usuario_existente = self._buscar_usuario_por_email(email)
+            if usuario_existente:
+                return render_template('cadastro.html', mensagem=self.MENSAGENS['email_ja_cadastrado'])
 
-        # Cria o objeto `Usuario` com o hash gerado
-        usuario = Usuario(None, nome, email, hash_senha)
+            hash_senha = self._gerar_hash_senha(senha)
 
-        # Envia o usuário para o DAL
-        usuario_dal.cadastrar_usuario(usuario)
+            novo_usuario = Usuario(None, nome, email, hash_senha)
+            self.usuario_dal.cadastrar_usuario(novo_usuario)
 
-        return render_template('login.html', mensagem='Usuário cadastrado com sucesso!')
+            return render_template('login.html', mensagem=self.MENSAGENS['cadastro_sucesso'])
 
-    return render_template('cadastro.html')
-
-    
+        return render_template('cadastro.html')
