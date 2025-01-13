@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafo Social</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        #canvas {
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grafo Social</h1>
+    <h2>Grafo Social</h2>
+    <canvas id="canvas" width="1250" height="1200"></canvas>
+
+    <h2>Grau dos Vértices</h2>
+    <div id="barChart"></div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Função para carregar os dados automaticamente
+        async function loadGraph() {
+            const response = await fetch('/process');
+            const data = await response.json();
+
+            if (data.error) {
+                alert(data.error);
+                return;
+            }
+
+            drawGraph(data.connections);
+            drawBarChart(data.degrees);
+        }
+
+        function drawGraph(connections) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const positions = {};
+            const nodes = Object.keys(connections);
+
+            const nodeRadius = 40; // Tamanho das bolinhas
+            const padding = 50; // Espaço mínimo entre os nós
+
+            // Define posições aleatórias para cada nó
+            nodes.forEach((node) => {
+                let x, y;
+                let isOverlapping;
+
+                // Gera posições aleatórias até que elas não se sobreponham a outros nós
+                do {
+                    isOverlapping = false;
+                    x = Math.random() * (canvas.width - 2 * padding) + padding;
+                    y = Math.random() * (canvas.height - 2 * padding) + padding;
+
+                    for (const otherNode in positions) {
+                        const dx = x - positions[otherNode].x;
+                        const dy = y - positions[otherNode].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+
+                        if (distance < 2 * nodeRadius + padding) {
+                            isOverlapping = true;
+                            break;
+                        }
+                    }
+                } while (isOverlapping);
+
+                positions[node] = { x, y };
+
+                // Desenha o nó
+                ctx.beginPath();
+                ctx.arc(x, y, nodeRadius, 0, 2 * Math.PI);
+                ctx.fillStyle = '#3498db';
+                ctx.fill();
+                ctx.stroke();
+                ctx.closePath();
+
+                // Desenha o nome dentro do nó
+                ctx.fillStyle = 'black'; // Cor do texto
+                ctx.font = '12px Arial'; // Tamanho e estilo da fonte
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle'; // Centraliza verticalmente o texto
+                ctx.fillText(node, x, y); // Posição do texto é o centro do nó
+            });
+
+            // Desenha as arestas
+            for (const [node, neighbors] of Object.entries(connections)) {
+                neighbors.forEach((neighbor) => {
+                    const startX = positions[node].x;
+                    const startY = positions[node].y;
+                    const endX = positions[neighbor].x;
+                    const endY = positions[neighbor].y;
+
+                    // Calcula a direção da linha
+                    const dx = endX - startX;
+                    const dy = endY - startY;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    // Calcula os pontos ajustados no limite do círculo
+                    const offsetX = (dx / distance) * nodeRadius;
+                    const offsetY = (dy / distance) * nodeRadius;
+
+                    const adjustedStartX = startX + offsetX;
+                    const adjustedStartY = startY + offsetY;
+                    const adjustedEndX = endX - offsetX;
+                    const adjustedEndY = endY - offsetY;
+
+                    // Desenha a linha ajustada
+                    ctx.beginPath();
+                    ctx.moveTo(adjustedStartX, adjustedStartY);
+                    ctx.lineTo(adjustedEndX, adjustedEndY);
+                    ctx.strokeStyle = '#2c3e50';
+                    ctx.stroke();
+                    ctx.closePath();
+                });
+            }
+        }
+        function drawBarChart(degrees) {
+            google.charts.load('current', { packages: ['corechart'] });
+            google.charts.setOnLoadCallback(() => {
+                const data = new google.visualization.DataTable();
+                data.addColumn('string', 'Pessoa');
+                data.addColumn('number', 'Grau');
+
+                for (const [person, degree] of Object.entries(degrees)) {
+                    data.addRow([person, degree]);
+                }
+
+                const options = {
+                    title: 'Grau dos Vértices',
+                    hAxis: { title: 'Pessoa' },
+                    vAxis: { title: 'Grau' },
+                };
+
+                const chart = new google.visualization.ColumnChart(document.getElementById('barChart'));
+                chart.draw(data, options);
+            });
+        }
+
+        // Chama a função ao carregar a página
+        window.onload = loadGraph;
+    </script>
+</body>
+</html>
