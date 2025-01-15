@@ -63,7 +63,6 @@
                 let x, y;
                 let isOverlapping;
 
-                // Gera posições aleatórias até que elas não se sobreponham a outros nós
                 do {
                     isOverlapping = false;
                     x = Math.random() * (canvas.width - 2 * padding) + padding;
@@ -87,7 +86,7 @@
                 // Desenha o nó
                 ctx.beginPath();
                 ctx.arc(x, y, nodeRadius, 0, 2 * Math.PI);
-                ctx.fillStyle = colors[node]; // Usa a cor gerada
+                ctx.fillStyle = colors[node]; 
                 ctx.fill();
                 ctx.stroke();
                 ctx.closePath();
@@ -142,10 +141,10 @@
                 const data = new google.visualization.DataTable();
                 data.addColumn('string', 'Pessoa');
                 data.addColumn('number', 'Grau');
-                data.addColumn({ type: 'string', role: 'style' }); // Coluna para estilo
+                data.addColumn({ type: 'string', role: 'style' }); 
 
                 for (const [person, degree] of Object.entries(degrees)) {
-                    data.addRow([person, degree, `color: ${colors[person]}`]); // Adiciona a cor
+                    data.addRow([person, degree, `color: ${colors[person]}`]); 
                 }
 
                 const options = {
