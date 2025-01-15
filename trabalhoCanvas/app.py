@@ -8,8 +8,8 @@ def index():
 
 @app.route('/process', methods=['GET'])
 def process_file():
-    # Caminho do arquivo fixo nome.txt
-    file_path = 'nomes.txt'
+    # Caminho do arquivo fixo nomes.txt
+    file_path = './nomes.txt'
     
     try:
         connections = {}
