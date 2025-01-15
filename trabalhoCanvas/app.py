@@ -8,7 +8,6 @@ def index():
 
 @app.route('/process', methods=['GET'])
 def process_file():
-    # Caminho do arquivo fixo nomes.txt
     file_path = './nomes.txt'
     
     try:
@@ -25,7 +24,6 @@ def process_file():
                     connections.setdefault(person1, []).append(person2)
                     connections.setdefault(person2, []).append(person1)
                 except ValueError:
-                    # Log de erro ou tratamento de linhas inválidas, se necessário
                     continue
 
         # Calcula o grau de cada pessoa
