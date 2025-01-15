@@ -34,20 +34,31 @@
                 return;
             }
 
-            drawGraph(data.connections);
-            drawBarChart(data.degrees);
+            const colors = drawGraph(data.connections); // Desenha o grafo e obtém as cores
+            drawBarChart(data.degrees, colors); // Passa as cores para o gráfico
+        }
+
+        // Função para gerar uma cor aleatória
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
         }
 
         function drawGraph(connections) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             const positions = {};
+            const colors = {}; // Objeto para armazenar as cores dos nós
             const nodes = Object.keys(connections);
 
             const nodeRadius = 40; // Tamanho das bolinhas
             const padding = 50; // Espaço mínimo entre os nós
 
-            // Define posições aleatórias para cada nó
+            // Define posições e cores aleatórias para cada nó
             nodes.forEach((node) => {
                 let x, y;
                 let isOverlapping;
@@ -71,11 +82,12 @@
                 } while (isOverlapping);
 
                 positions[node] = { x, y };
+                colors[node] = getRandomColor(); // Gera uma cor aleatória para o nó
 
                 // Desenha o nó
                 ctx.beginPath();
                 ctx.arc(x, y, nodeRadius, 0, 2 * Math.PI);
-                ctx.fillStyle = '#3498db';
+                ctx.fillStyle = colors[node]; // Usa a cor gerada
                 ctx.fill();
                 ctx.stroke();
                 ctx.closePath();
@@ -119,22 +131,28 @@
                     ctx.closePath();
                 });
             }
+
+            // Retorna as cores para serem usadas no gráfico de barras
+            return colors;
         }
-        function drawBarChart(degrees) {
+
+        function drawBarChart(degrees, colors) {
             google.charts.load('current', { packages: ['corechart'] });
             google.charts.setOnLoadCallback(() => {
                 const data = new google.visualization.DataTable();
                 data.addColumn('string', 'Pessoa');
                 data.addColumn('number', 'Grau');
+                data.addColumn({ type: 'string', role: 'style' }); // Coluna para estilo
 
                 for (const [person, degree] of Object.entries(degrees)) {
-                    data.addRow([person, degree]);
+                    data.addRow([person, degree, `color: ${colors[person]}`]); // Adiciona a cor
                 }
 
                 const options = {
                     title: 'Grau dos Vértices',
                     hAxis: { title: 'Pessoa' },
                     vAxis: { title: 'Grau' },
+                    legend: 'none',
                 };
 
                 const chart = new google.visualization.ColumnChart(document.getElementById('barChart'));
