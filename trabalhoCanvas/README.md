@@ -2,7 +2,7 @@
 
 ## Desenvolvido por:
 * Mariana Duarte - 0076895
-* Amanda Almeida - 
+* Amanda Almeida - 0018739 
 
 ## Objetivo
 * Implementar um mini sistema WEB para ler arquivo txt e a partir do conteúdo do arquivo gerar visualmente um Grafo Social na página. A página WEB também deverá plotar um gráfico em barros mostrando o grau (número de conexões) de cada pessoa (vértice).
