@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Banco de Dados</title>
+</head>
+<body>
+    <nav class="my-navbar">
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/diagnosis">Realizar Diagnóstico</a></li>
+            <li><a href="/database">Banco de Dados</a></li>
+            <li><a href="/training-page">Tabela de Treinamento</a></li>
+        </ul>
+    </nav><br>
+    
+    <h1>Banco de Dados</h1>
+    
+    <h2>Sintomas</h2>
+    <a href="{{ url_for('add_symptom') }}"><button>Adicionar Sintoma</button></a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Ação</th>
+        </tr>
+        {% for symptom in symptoms %}
+        <tr>
+            <td>{{ symptom.id }}</td>
+            <td>{{ symptom.name }}</td>
+            <td>
+                <form method="POST" style="display:inline;">
+                    <input type="hidden" name="delete_entry_symptom" value="{{ symptom.id }}">
+                    <button type="submit">❌ Excluir</button>
+                </form>
+            </td>         </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Doenças</h2>
+    <a href="{{ url_for('add_disease') }}"><button>Adicionar Doença</button></a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Ação</th>
+        </tr>
+        {% for disease in diseases %}
+        <tr>
+            <td>{{ disease.id }}</td>
+            <td>{{ disease.name }}</td>
+            <td>
+                <form method="POST" style="display:inline;">
+                    <input type="hidden" name="delete_entry_disease" value="{{ disease.id }}">
+                    <button type="submit">❌ Excluir</button>
+                </form>
+            </td>       
+         </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

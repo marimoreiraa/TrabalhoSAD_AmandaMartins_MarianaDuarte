@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico Médico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="my-navbar">
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/diagnosis">Realizar Diagnóstico</a></li>
+            <li><a href="/database">Banco de Dados</a></li>
+            <li><a href="/training-page">Tabela de Treinamento</a></li>
+        </ul>
+    </nav><br>
+    
+    <h1>Diagnóstico Médico</h1>
+    
+    <form action="{{ url_for('result') }}" method="POST">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sintoma</th>
+                    <th>Intensidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for symptom in symptoms %}
+                <tr>
+                    <td>{{ symptom.name }}</td>
+                    <td>
+                        <select name="{{ symptom.name }}">
+                            <option value="Irrelevante">Irrelevante</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Forte">Forte</option>
+                        </select>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <button type="submit">Diagnosticar</button>
+    </form>
+</body>
+</html>
+

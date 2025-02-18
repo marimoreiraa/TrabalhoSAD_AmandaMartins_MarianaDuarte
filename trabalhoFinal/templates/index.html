@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico Médico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Bem-vindo ao Sistema de Diagnóstico Médico</h1>
+    <p>Escolha uma opção:</p>
+    
+    <div class="menu">
+        <a href="{{ url_for('diagnosis') }}" class="btn">Realizar Diagnóstico</a>
+        <a href="{{ url_for('training_page') }}" class="btn">Editar Tabela de Treinamento</a>
+        <a href="{{ url_for('database') }}" class="btn">Banco de Dados</a>
+    </div>
+</body>
+</html>
+

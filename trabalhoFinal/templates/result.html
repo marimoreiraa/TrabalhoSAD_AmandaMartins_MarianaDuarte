@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Resultado do Diagnóstico</title>
+</head>
+<body>
+    <nav class="my-navbar">
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/diagnosis">Realizar Diagnóstico</a></li>
+            <li><a href="/database">Banco de Dados</a></li>
+            <li><a href="/training-page">Tabela de Treinamento</a></li>
+        </ul>
+    </nav><br>
+    
+    
+    <h1>Resultado do Diagnóstico</h1>
+
+    {% if diagnosis %}
+        <h2>Diagnóstico:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Doença</th>
+                    <th>Compatibilidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for disease, classification in diagnosis %}
+                    <tr>
+                        <td>{{ disease }}</td>
+                        <td>{{ classification }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Nenhuma doença identificada.</p>
+    {% endif %}
+
+    <a href="{{ url_for('diagnosis') }}"><button>Voltar ao Diagnóstico</button></a>
+</body>
+</html>
+

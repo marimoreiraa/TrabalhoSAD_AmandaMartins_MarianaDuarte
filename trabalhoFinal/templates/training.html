@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Página de Treinamento</title>
+</head>
+<body>
+    <nav class="my-navbar">
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/diagnosis">Realizar Diagnóstico</a></li>
+            <li><a href="/database">Banco de Dados</a></li>
+            <li><a href="/training-page">Tabela de Treinamento</a></li>
+        </ul>
+    </nav><br>
+    
+    
+    <h1>Página de Treinamento</h1>
+    
+    <a href="{{ url_for('training_add') }}"><button>Adicionar Dados</button></a>
+    <table>
+        <thead>
+            <tr>
+                <th>Sintoma</th>
+                <th>Intensidade</th>
+                <th>Doença</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in training_data %}
+            <tr>
+                <td>{{ data.symptom }}</td>
+                <td>{{ data.intensity }}</td>
+                <td>{{ data.disease }}</td>
+                <td>
+                    <form method="POST" style="display:inline;">
+                        <input type="hidden" name="delete_entry" value="{{ data.id }}">
+                        <button type="submit">❌ Excluir</button>
+                    </form>
+                </td>            
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

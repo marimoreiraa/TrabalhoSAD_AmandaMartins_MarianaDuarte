@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Adicionar Treinamento</title>
+</head>
+<body>
+    <nav class="my-navbar">
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/diagnosis">Realizar Diagnóstico</a></li>
+            <li><a href="/database">Banco de Dados</a></li>
+            <li><a href="/training-page">Tabela de Treinamento</a></li>
+        </ul>
+    </nav><br>
+    
+    <h1>Adicionar Dados ao Treinamento</h1>
+    <form method="POST">
+        <label for="disease">Doença:</label><br>
+        <select name="disease">
+            {% for disease in diseases %}
+            <option value="{{ disease.id }}">{{ disease.name }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="symptom">Sintomas:</label><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sintoma</th>
+                    <th>Intensidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for symptom in symptoms %}
+                <tr>
+                    <td>{{ symptom.name }}</td>
+                    <td>
+                        <select name="symptom_{{ symptom.id }}">
+                            <option value="Irrelevante">Irrelevante</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Forte">Forte</option>
+                        </select>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit">Adicionar</button>
+    </form>
+</body>
+</html>
